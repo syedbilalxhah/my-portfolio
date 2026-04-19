@@ -13,7 +13,53 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
                 <link rel="stylesheet" href="static/css/flaticon.css" />
+        <style>
+            .demo-side-icon,
+            .demos-side-content {
+                display: none !important;
+            }
+    .demo-side-icon,
+    .demos-side-content {
+        display: none !important;
+    }
+    
+    /* Icons ko force show - HIGHEST PRIORITY */
+    .what-item i,
+    .what-item .icon,
+    i.fas, i.far, i.fab,
+    i.bx, i.bxs, i.bxl {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 50px !important;
+        margin-bottom: 20px !important;
+        color: #ff5e14 !important;
+        line-height: 1.2 !important;
+        width: auto !important;
+        height: auto !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    
+    /* Font Awesome ko force */
+    .fas, .far, .fab {
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 900 !important;
+    }
+    
+    /* Boxicons ko force */
+    .bx, .bxs, .bxl {
+        font-family: 'boxicons' !important;
+        font-weight: normal !important;
+    }
+    
+    /* Kisi bhi icon class ko hide na hone do */
+    [class*="fa-"], [class*="bx-"] {
+        display: inline-block !important;
+    }
 
+            
+        </style>
         <!-- Agar flaticon local folder mein hai to ye link bhi add karo -->
         
 
@@ -787,5 +833,27 @@
                 '17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Reton - Resume CV React Nextjs Template"}],["$","meta","3",{"name":"description","content":"Resume CV React Nextjs Template"}],["$","link","4",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]\n8:null\n',
             ]);
         </script>
+        <script>
+    // Force icons after React loads
+    setTimeout(function() {
+        var icons = document.querySelectorAll('.what-item i, .what-item .icon');
+        for(var i = 0; i < icons.length; i++) {
+            icons[i].style.display = 'inline-block';
+            icons[i].style.visibility = 'visible';
+            icons[i].style.opacity = '1';
+        }
+    }, 100);
+    
+    // MutationObserver for dynamic changes
+    var observer = new MutationObserver(function() {
+        var icons = document.querySelectorAll('.what-item i, .what-item .icon');
+        for(var i = 0; i < icons.length; i++) {
+            icons[i].style.display = 'inline-block';
+            icons[i].style.visibility = 'visible';
+            icons[i].style.opacity = '1';
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+</script>
     </body>
 </html>
