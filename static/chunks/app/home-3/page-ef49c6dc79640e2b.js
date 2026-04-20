@@ -722,7 +722,7 @@
                                                     children: [
                                                         "Hello I am a ",
                                                         (0, a.jsx)("span", { children: "Full Stack Web Developer" }),
-                                                        " who builds real things and transforms your ideas into cutting-edge web solutions. I craft high performance web applications tailored to your business.My code is  secure and actually maintainable. Tell me what you need and I will make it happen.",
+                                                        " who builds real things and transforms your ideas into cutting-edge web solutions. I craft high performance web applications tailored to your business. My code is secure and actually maintainable. Tell me what you need and I'll make it happen.",
                                                     ],
                                                 }),
                                                 (0, a.jsxs)("div", {
