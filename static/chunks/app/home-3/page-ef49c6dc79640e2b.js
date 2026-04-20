@@ -721,8 +721,8 @@
                                                 (0, a.jsxs)("p", {
                                                     children: [
                                                         "Hello I am a ",
-                                                        (0, a.jsx)("span", { children: "UI/UX Designer" }),
-                                                        " from San Francisco. I have rich experience of 5+ years in web site design and app design, also I am good at extraordinary design concept. I love to hear from you about your unique needs.",
+                                                        (0, a.jsx)("span", { children: "Full Stack Web Developer" }),
+                                                        " who builds real things and transforms your ideas into cutting-edge web solutions. I craft high performance web applications tailored to your business.My code is  secure and actually maintainable. Tell me what you need and I will make it happen.",
                                                     ],
                                                 }),
                                                 (0, a.jsxs)("div", {
