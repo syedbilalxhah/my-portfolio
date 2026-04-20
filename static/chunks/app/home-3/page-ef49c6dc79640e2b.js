@@ -55,7 +55,7 @@
                                                         }),
                                                         (0, a.jsx)("h2", {
                                                             children:
-                                                                "I Am A Web Developer, Specialized In Developing Web Applications in PHP, JavaScript",
+                                                                "I am a Developer, specialized in Developing Web Applicaion in PHP and JavaScript",
                                                         }),
                                                         (0, a.jsx)("p", {
                                                             children:
@@ -88,18 +88,6 @@
                                                                                 "San Francisco",
                                                                             ],
                                                                         }),
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Address:",
-                                                                                }),
-                                                                                (0, a.jsx)("a", {
-                                                                                    href: "#",
-                                                                                    target: "_blank",
-                                                                                    children: "12/7, Mc Street, Canada",
-                                                                                }),
-                                                                            ],
-                                                                        }),
                                                                     ],
                                                                 }),
                                                             }),
@@ -129,18 +117,6 @@
                                                                                 (0, a.jsx)("a", {
                                                                                     href: "mailto:hello@reton.com",
                                                                                     children: "hello@reton.com",
-                                                                                }),
-                                                                            ],
-                                                                        }),
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Website:",
-                                                                                }),
-                                                                                (0, a.jsx)("a", {
-                                                                                    href: "#",
-                                                                                    target: "_blank",
-                                                                                    children: "www.reton.com",
                                                                                 }),
                                                                             ],
                                                                         }),
@@ -815,8 +791,8 @@
                                         children: (0, a.jsx)(d.default, {
                                             src: "static/images/1.png",
                                             alt: "logo",
-                                            width: 150,
-                                            height: 50,
+                                            width: 200,
+                                            height: 100,
                                         }),
                                     }),
                                     (0, a.jsxs)("button", {
