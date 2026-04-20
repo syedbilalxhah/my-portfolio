@@ -813,7 +813,7 @@
                                         href: "/home-3",
                                         className: "navbar-brand logo",
                                         children: (0, a.jsx)(d.default, {
-                                            src: "images/l.png",
+                                            src: "/static/images/1.png",
                                             alt: "logo",
                                             width: 120,
                                             height: 36,
