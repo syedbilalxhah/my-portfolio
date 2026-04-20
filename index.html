@@ -14,9 +14,16 @@
             .demos-side-content {
                 display: none !important;
             }
-                    /* Watermark hide karne ke liye */
-    .common-right-text-two {
-        display: none !important;
+/* Watermark hide karne ke liye - Stronger selector */
+.banner-area .common-right-text-two,
+.common-right-text-two {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+}
     }
         </style>    
         <link rel="preload" as="script" fetchpriority="low" href="static/chunks/webpack-7d294d50208950b3.js" />
