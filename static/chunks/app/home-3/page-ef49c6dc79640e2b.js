@@ -809,16 +809,11 @@
                             children: (0, a.jsxs)("div", {
                                 className: "container",
                                 children: [
-                                    (0, a.jsx)(r.default, {
-                                        href: "/home-3",
-                                        className: "navbar-brand logo",
-                                        children: (0, a.jsx)(d.default, {
-                                            src: "images/l.png",
-                                            alt: "logo",
-                                            width: 120,
-                                            height: 36,
-                                        }),
-                                    }),
+    (0, a.jsx)(r.default, {
+        href: "/home-3",
+        className: "navbar-brand logo",
+        children: "My Portfolio"  // Text logo
+    }),
                                     (0, a.jsxs)("button", {
                                         onClick: o,
                                         className: e
