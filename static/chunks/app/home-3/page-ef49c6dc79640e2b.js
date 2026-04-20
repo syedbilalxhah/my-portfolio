@@ -716,7 +716,7 @@
                                             className: "banner-content",
                                             children: [
                                                 (0, a.jsxs)("h1", {
-                                                    children: [(0, a.jsx)("span", { children: "Syed Muhammad" }), " Bilal"],
+                                                    children: [(0, a.jsx)("span", { children: "Muhammad" }), " Bilal"],
                                                 }),
                                                 (0, a.jsxs)("p", {
                                                     children: [
