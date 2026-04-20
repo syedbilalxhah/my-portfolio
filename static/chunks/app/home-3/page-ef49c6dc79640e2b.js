@@ -77,7 +77,7 @@
                                                                                 (0, a.jsx)("span", {
                                                                                     children: "Age:",
                                                                                 }),
-                                                                                "26 Years",
+                                                                                "24 Years",
                                                                             ],
                                                                         }),
                                                                         (0, a.jsxs)("li", {
@@ -85,7 +85,7 @@
                                                                                 (0, a.jsx)("span", {
                                                                                     children: "Residence:",
                                                                                 }),
-                                                                                "San Francisco",
+                                                                                "Pakistan",
                                                                             ],
                                                                         }),
                                                                     ],
@@ -104,8 +104,8 @@
                                                                                     children: "Phone:",
                                                                                 }),
                                                                                 (0, a.jsx)("a", {
-                                                                                    href: "tel:+00932123456",
-                                                                                    children: "+009 321 23456",
+                                                                                    href: "tel:+923314070426",
+                                                                                    children: "+92 331 4070426",
                                                                                 }),
                                                                             ],
                                                                         }),
@@ -115,8 +115,8 @@
                                                                                     children: "Email:",
                                                                                 }),
                                                                                 (0, a.jsx)("a", {
-                                                                                    href: "mailto:hello@reton.com",
-                                                                                    children: "hello@reton.com",
+                                                                                    href: "mailto:syedbilal10ua@gamail.com",
+                                                                                    children: "syedbilal10ua@gmail.com",
                                                                                 }),
                                                                             ],
                                                                         }),
@@ -791,8 +791,8 @@
                                         children: (0, a.jsx)(d.default, {
                                             src: "static/images/1.png",
                                             alt: "logo",
-                                            width: 230,
-                                            height: 130,
+                                            width: 250,
+                                            height: 150,
                                         }),
                                     }),
                                     (0, a.jsxs)("button", {
