@@ -55,11 +55,11 @@
                                                         }),
                                                         (0, a.jsx)("h2", {
                                                             children:
-                                                                "I Am A Web Developer, Specialized In WordPress, PHP, JavaScript & React",
+                                                                "I Am A Web Developer, Specialized In Developing Web Applications in PHP, JavaScript",
                                                         }),
                                                         (0, a.jsx)("p", {
                                                             children:
-                                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
+                                                                "I'm a Full Stack Developer who turns complex backend logic into smooth, working systems. I specialize in building custom websites, powerful admin panels, and scalable web applications.",
                                                         }),
                                                     ],
                                                 }),
