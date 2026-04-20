@@ -791,8 +791,8 @@
                                         children: (0, a.jsx)(d.default, {
                                             src: "static/images/1.png",
                                             alt: "logo",
-                                            width: 200,
-                                            height: 100,
+                                            width: 230,
+                                            height: 130,
                                         }),
                                     }),
                                     (0, a.jsxs)("button", {
