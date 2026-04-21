@@ -55,11 +55,11 @@
                                                         }),
                                                         (0, a.jsx)("h2", {
                                                             children:
-                                                                "I am a Developer, specialized in Developing Web Applicaion in PHP and JavaScript",
+                                                                "What Can I Do !",
                                                         }),
                                                         (0, a.jsx)("p", {
                                                             children:
-                                                                "I'm a Full Stack Developer who turns complex backend logic into smooth, working systems. I specialize in building custom websites, powerful admin panels, and scalable web applications.",
+                                                                "I'm a Full Stack Developer. I specialize in taking complex backend logics like databases, user authentication, server-side processing  and turning it into smooth, efficient, and reliable systems. I build custom websites, powerful admin panels, and scalable web applications that are secure, fast, and easy to maintain.",
                                                         }),
                                                     ],
                                                 }),
@@ -1122,11 +1122,11 @@
                                         (0, a.jsx)("span", { className: "sub-title", children: "SERVICES" }),
                                         (0, a.jsx)("h2", {
                                             children:
-                                                "I Offer Special Service To My Client For Their Ultimate Satisfaction",
+                                                "Services That I Offer To My Clients For Their Ultimate Satisfaction",
                                         }),
                                         (0, a.jsx)("p", {
                                             children:
-                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
+                                                "I offer services that are all about client satisfaction. I don't stop until my client is completely happy with the work. Their trust and satisfaction are what matter most to me. The services that I offer are.",
                                         }),
                                     ],
                                 }),
@@ -1143,7 +1143,7 @@
                                                         children: (0, a.jsx)(l.default, {
                                                             href: "/services/details",
                                                             target: "_blank",
-                                                            children: "Web Design",
+                                                            children: "Web Applications",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
