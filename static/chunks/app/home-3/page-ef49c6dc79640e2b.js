@@ -1105,107 +1105,113 @@
                 });
         },
 72744: function (e, s, i) {
-    "use strict";
-    var a = i(57437);
-    i(2265);
-    var l = i(87138);
-    s.default = () =>
-        (0, a.jsx)(a.Fragment, {
-            children: (0, a.jsx)("div", {
-                className: "what-area three border-bottom-two pt-100 pb-70",
-                children: (0, a.jsxs)("div", {
-                    className: "container",
-                    children: [
-                        (0, a.jsxs)("div", {
-                            className: "section-title three",
+            "use strict";
+            var a = i(57437);
+            i(2265);
+            var l = i(87138);
+            s.default = () =>
+                (0, a.jsx)(a.Fragment, {
+                    children: (0, a.jsx)("div", {
+                        className: "what-area three border-bottom-two pt-100 pb-70",
+                        children: (0, a.jsxs)("div", {
+                            className: "container",
                             children: [
-                                (0, a.jsx)("span", { className: "sub-title", children: "SERVICES" }),
-                                (0, a.jsx)("h2", {
-                                    children: "Services That I Offer To My Clients For Their Ultimate Satisfaction",
+                                (0, a.jsxs)("div", {
+                                    className: "section-title three",
+                                    children: [
+                                        (0, a.jsx)("span", { className: "sub-title", children: "SERVICES" }),
+                                        (0, a.jsx)("h2", {
+                                            children:
+                                                "Services That I Offer To My Clients For Their Ultimate Satisfaction",
+                                        }),
+                                        (0, a.jsx)("p", {
+                                            children:
+                                                "I offer services that are all about client satisfaction. I don't stop until my client is completely happy with the work. Their trust and satisfaction are what matter most to me. The services that I offer are.",
+                                        }),
+                                    ],
                                 }),
-                                (0, a.jsx)("p", {
-                                    children: "I offer services that are all about client satisfaction. I don't stop until my client is completely happy with the work. Their trust and satisfaction are what matter most to me. The services that I offer are.",
+                                (0, a.jsxs)("div", {
+                                    className: "row",
+                                    children: [
+                                        (0, a.jsx)("div", {
+                                            className: "col-sm-6 col-lg-6",
+                                            children: (0, a.jsxs)("div", {
+                                                className: "what-item",
+                                                children: [
+                                                    (0, a.jsx)("i", { className: "flaticon-global icon" }),
+                                                    (0, a.jsx)("h3", {
+                                                        children: (0, a.jsx)(l.default, {
+                                                            children: "Web Applications Development",
+                                                        }),
+                                                    }),
+                                                    (0, a.jsx)("p", {
+                                                        children:
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                ],
+                                            }),
+                                        }),
+                                        (0, a.jsx)("div", {
+                                            className: "col-sm-6 col-lg-6",
+                                            children: (0, a.jsxs)("div", {
+                                                className: "what-item",
+                                                children: [
+                                                    (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
+                                                    (0, a.jsx)("h3", {
+                                                        children: (0, a.jsx)(l.default, {
+                                                            children: "Web Design",
+                                                        }),
+                                                    }),
+                                                    (0, a.jsx)("p", {
+                                                        children:
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                ],
+                                            }),
+                                        }),
+                                        (0, a.jsx)("div", {
+                                            className: "col-sm-6 col-lg-6",
+                                            children: (0, a.jsxs)("div", {
+                                                className: "what-item",
+                                                children: [
+                                                    (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
+                                                    (0, a.jsx)("h3", {
+                                                        children: (0, a.jsx)(l.default, {
+                                                            children: "Custom Web Solutions",
+                                                        }),
+                                                    }),
+                                                    (0, a.jsx)("p", {
+                                                        children:
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                ],
+                                            }),
+                                        }),
+                                        (0, a.jsx)("div", {
+                                            className: "col-sm-6 col-lg-6",
+                                            children: (0, a.jsxs)("div", {
+                                                className: "what-item",
+                                                children: [
+                                                    (0, a.jsx)("i", { className: "flaticon-branding icon" }),
+                                                    (0, a.jsx)("h3", {
+                                                        children: (0, a.jsx)(l.default, {
+                                                            children: "Website Maintenance",
+                                                        }),
+                                                    }),
+                                                    (0, a.jsx)("p", {
+                                                        children:
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                ],
+                                            }),
+                                        }),
+                                    ],
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)("div", {
-                            className: "row",
-                            children: [
-                                (0, a.jsx)("div", {
-                                    className: "col-sm-6 col-lg-6",
-                                    children: (0, a.jsxs)("div", {
-                                        className: "what-item",
-                                        children: [
-                                            (0, a.jsx)("i", { className: "flaticon-global icon" }),
-                                            (0, a.jsx)("h3", {
-                                                children: (0, a.jsx)(l.default, {
-                                                    children: "Web Applications Development",
-                                                }),
-                                            }),
-                                            (0, a.jsx)("p", {
-                                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "col-sm-6 col-lg-6",
-                                    children: (0, a.jsxs)("div", {
-                                        className: "what-item",
-                                        children: [
-                                            (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
-                                            (0, a.jsx)("h3", {
-                                                children: (0, a.jsx)(l.default, {
-                                                    children: "Web Design",
-                                                }),
-                                            }),
-                                            (0, a.jsx)("p", {
-                                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "col-sm-6 col-lg-6",
-                                    children: (0, a.jsxs)("div", {
-                                        className: "what-item",
-                                        children: [
-                                            (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
-                                            (0, a.jsx)("h3", {
-                                                children: (0, a.jsx)(l.default, {
-                                                    children: "Custom Web Solutions",
-                                                }),
-                                            }),
-                                            (0, a.jsx)("p", {
-                                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "col-sm-6 col-lg-6",
-                                    children: (0, a.jsxs)("div", {
-                                        className: "what-item",
-                                        children: [
-                                            (0, a.jsx)("i", { className: "flaticon-branding icon" }),
-                                            (0, a.jsx)("h3", {
-                                                children: (0, a.jsx)(l.default, {
-                                                    children: "Website Maintenance",
-                                                }),
-                                            }),
-                                            (0, a.jsx)("p", {
-                                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            }),
-        });
-},
+                    }),
+                });
+        },
         39048: function (e, s, i) {
             "use strict";
             var a = i(57437);
