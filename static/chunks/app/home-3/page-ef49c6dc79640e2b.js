@@ -141,342 +141,219 @@
             i(2265);
             var l = i(87138),
                 r = i(66648);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        id: "blog",
-                        className: "blog-area three border-bottom-two pt-100 pb-70",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
+            s.default = () => null;
+        },
+41144: function (e, s, i) {
+    "use strict";
+    var a = i(57437);
+    i(2265);
+    
+    // Email send karne ka function
+    const sendEmail = async (formData) => {
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/syedbilal10ua@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    subject: formData.get('subject'),
+                    phone: formData.get('number'),
+                    message: formData.get('text'),
+                })
+            });
+            
+            if (response.ok) {
+                alert('Thank you! Your message has been sent successfully.');
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            alert('Error sending message. Please try again.');
+        }
+    };
+    
+    s.default = () =>
+        (0, a.jsx)(a.Fragment, {
+            children: (0, a.jsx)("div", {
+                id: "contact",
+                className: "contact-area three border-bottom-two pt-100 pb-70",
+                children: (0, a.jsxs)("div", {
+                    className: "container",
+                    children: [
+                        (0, a.jsxs)("div", {
+                            className: "section-title three",
                             children: [
-                                (0, a.jsxs)("div", {
-                                    className: "section-title three",
-                                    children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "BLOG" }),
-                                        (0, a.jsx)("h2", {
-                                            children: "Read My Blog To Know More About My Design Process",
-                                        }),
-                                        (0, a.jsx)("p", {
-                                            children:
-                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
-                                        }),
-                                    ],
+                                (0, a.jsx)("span", { className: "sub-title", children: "CONTACT" }),
+                                (0, a.jsx)("h2", {
+                                    children: "Have a project? Drop A Line Here and let's build something great.",
                                 }),
-                                (0, a.jsxs)("div", {
-                                    className: "row",
-                                    children: [
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "blog-item",
-                                                children: [
-                                                    (0, a.jsxs)("div", {
-                                                        className: "top",
-                                                        children: [
-                                                            (0, a.jsx)(l.default, {
-                                                                href: "/blog/details",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)(r.default, {
-                                                                    src: "/images/blog/blog10.jpg",
-                                                                    alt: "Blog",
-                                                                    width: 510,
-                                                                    height: 400,
-                                                                }),
-                                                            }),
-                                                            (0, a.jsxs)("h4", {
-                                                                children: [
-                                                                    "12 ",
-                                                                    (0, a.jsx)("span", { children: "Oct" }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                                    (0, a.jsxs)("div", {
-                                                        className: "bottom",
-                                                        children: [
-                                                            (0, a.jsx)("h3", {
-                                                                children: (0, a.jsx)(l.default, {
-                                                                    href: "/blog/details",
-                                                                    target: "_blank",
-                                                                    children:
-                                                                        "How To Improve Design Sense & Skill To Manage Design Work",
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("p", {
-                                                                children:
-                                                                    "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod tempor invidunt",
-                                                            }),
-                                                            (0, a.jsxs)(l.default, {
-                                                                href: "/blog/details",
-                                                                className: "blog-btn",
-                                                                target: "_blank",
-                                                                children: [
-                                                                    "Read More ",
-                                                                    (0, a.jsx)("i", {
-                                                                        className: "flaticon-right-arrow",
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "blog-item",
-                                                children: [
-                                                    (0, a.jsxs)("div", {
-                                                        className: "top",
-                                                        children: [
-                                                            (0, a.jsx)(l.default, {
-                                                                href: "/blog/details",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)(r.default, {
-                                                                    src: "/images/blog/blog11.jpg",
-                                                                    alt: "Blog",
-                                                                    width: 510,
-                                                                    height: 400,
-                                                                }),
-                                                            }),
-                                                            (0, a.jsxs)("h4", {
-                                                                children: [
-                                                                    "13 ",
-                                                                    (0, a.jsx)("span", { children: "Oct" }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                                    (0, a.jsxs)("div", {
-                                                        className: "bottom",
-                                                        children: [
-                                                            (0, a.jsx)("h3", {
-                                                                children: (0, a.jsx)(l.default, {
-                                                                    href: "/blog/details",
-                                                                    target: "_blank",
-                                                                    children:
-                                                                        "How Design Became Fun In My Life & Took The Empty Space Of Heart",
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("p", {
-                                                                children:
-                                                                    "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonumy eirmod tempor invidunt",
-                                                            }),
-                                                            (0, a.jsxs)(l.default, {
-                                                                href: "/blog/details",
-                                                                className: "blog-btn",
-                                                                target: "_blank",
-                                                                children: [
-                                                                    "Read More ",
-                                                                    (0, a.jsx)("i", {
-                                                                        className: "flaticon-right-arrow",
-                                                                    }),
-                                                                ],
-                                                            }),
-                                                        ],
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    ],
+                                (0, a.jsx)("p", {
+                                    children: "I'm available for freelance work and full-time projects. Whether you have a clear idea or just a rough concept reach out, and let's discuss how I can help.",
                                 }),
                             ],
                         }),
-                    }),
-                });
-        },
-        41144: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265),
-                (s.default = () =>
-                    (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)("div", {
-                            id: "contact",
-                            className: "contact-area three border-bottom-two pt-100 pb-70",
-                            children: (0, a.jsxs)("div", {
-                                className: "container",
-                                children: [
-                                    (0, a.jsxs)("div", {
-                                        className: "section-title three",
+                        (0, a.jsxs)("div", {
+                            className: "row align-items-center",
+                            children: [
+                                (0, a.jsx)("div", {
+                                    className: "col-md-7 col-lg-6",
+                                    children: (0, a.jsxs)("form", {
+                                        id: "contactForm",
+                                        onSubmit: (e) => {
+                                            e.preventDefault();
+                                            const formData = new FormData(e.target);
+                                            sendEmail(formData);
+                                        },
                                         children: [
-                                            (0, a.jsx)("span", { className: "sub-title", children: "CONTACT" }),
-                                            (0, a.jsx)("h2", {
-                                                children: "Yes! You Are Here! Have You Any Project? Drop A Line Here",
+                                            (0, a.jsx)("div", {
+                                                className: "form-group",
+                                                children: (0, a.jsx)("input", {
+                                                    type: "text",
+                                                    name: "name",
+                                                    className: "form-control",
+                                                    placeholder: "Name",
+                                                    required: true,
+                                                }),
                                             }),
-                                            (0, a.jsx)("p", {
-                                                children:
-                                                    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
+                                            (0, a.jsx)("div", {
+                                                className: "form-group",
+                                                children: (0, a.jsx)("input", {
+                                                    type: "email",
+                                                    name: "email",
+                                                    className: "form-control",
+                                                    placeholder: "Email",
+                                                    required: true,
+                                                }),
+                                            }),
+                                            (0, a.jsx)("div", {
+                                                className: "form-group",
+                                                children: (0, a.jsx)("input", {
+                                                    type: "text",
+                                                    name: "subject",
+                                                    className: "form-control",
+                                                    placeholder: "Subject",
+                                                    required: true,
+                                                }),
+                                            }),
+                                            (0, a.jsx)("div", {
+                                                className: "form-group",
+                                                children: (0, a.jsx)("input", {
+                                                    type: "text",
+                                                    name: "number",
+                                                    className: "form-control",
+                                                    placeholder: "Phone",
+                                                }),
+                                            }),
+                                            (0, a.jsx)("div", {
+                                                className: "form-group",
+                                                children: (0, a.jsx)("textarea", {
+                                                    name: "text",
+                                                    className: "form-control",
+                                                    cols: "30",
+                                                    rows: "6",
+                                                    placeholder: "Write message",
+                                                    required: true,
+                                                }),
+                                            }),
+                                            (0, a.jsxs)("button", {
+                                                type: "submit",
+                                                className: "btn common-btn three",
+                                                children: ["Send Message ", (0, a.jsx)("span", {})],
                                             }),
                                         ],
                                     }),
-                                    (0, a.jsxs)("div", {
-                                        className: "row align-items-center",
+                                }),
+                                (0, a.jsx)("div", {
+                                    className: "col-md-5 col-lg-6",
+                                    children: (0, a.jsxs)("div", {
+                                        className: "contact-content",
                                         children: [
                                             (0, a.jsx)("div", {
-                                                className: "col-md-7 col-lg-6",
-                                                children: (0, a.jsxs)("form", {
-                                                    id: "contactForm",
+                                                className: "top",
+                                                children: (0, a.jsxs)("ul", {
                                                     children: [
-                                                        (0, a.jsx)("div", {
-                                                            className: "form-group",
-                                                            children: (0, a.jsx)("input", {
-                                                                type: "text",
-                                                                name: "name",
-                                                                className: "form-control",
-                                                                placeholder: "Name",
-                                                            }),
+                                                        (0, a.jsxs)("li", {
+                                                            children: [
+                                                                (0, a.jsx)("span", { children: "Phone:" }),
+                                                                (0, a.jsx)("a", {
+                                                                    href: "tel:+923314070426",
+                                                                    children: "+92 331 4070426",
+                                                                }),
+                                                            ],
                                                         }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "form-group",
-                                                            children: (0, a.jsx)("input", {
-                                                                type: "text",
-                                                                name: "email",
-                                                                className: "form-control",
-                                                                placeholder: "Email",
-                                                            }),
+                                                        (0, a.jsxs)("li", {
+                                                            children: [
+                                                                (0, a.jsx)("span", { children: "Email:" }),
+                                                                (0, a.jsx)("a", {
+                                                                    href: "mailto:syedbilal10ua@gmail.com",
+                                                                    children: "syedbilal10ua@gmail.com",
+                                                                }),
+                                                            ],
                                                         }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "form-group",
-                                                            children: (0, a.jsx)("input", {
-                                                                type: "text",
-                                                                name: "subject",
-                                                                className: "form-control",
-                                                                placeholder: "Subject",
-                                                            }),
+                                                        (0, a.jsxs)("li", {
+                                                            children: [
+                                                                (0, a.jsx)("span", { children: "Website:" }),
+                                                                (0, a.jsx)("a", {
+                                                                    href: "https://syedbilalxhah.github.io/my-portfolio/",
+                                                                    target: "_blank",
+                                                                    children: "syedbilalxhan.github.io/my-portfolio",
+                                                                }),
+                                                            ],
                                                         }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "form-group",
-                                                            children: (0, a.jsx)("input", {
-                                                                type: "text",
-                                                                name: "number",
-                                                                className: "form-control",
-                                                                placeholder: "Phone",
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "form-group",
-                                                            children: (0, a.jsx)("textarea", {
-                                                                name: "text",
-                                                                className: "form-control",
-                                                                cols: "30",
-                                                                rows: "6",
-                                                                placeholder: "Write message",
-                                                            }),
-                                                        }),
-                                                        (0, a.jsxs)("button", {
-                                                            type: "submit",
-                                                            className: "btn common-btn three",
-                                                            children: ["Send Message ", (0, a.jsx)("span", {})],
+                                                        (0, a.jsxs)("li", {
+                                                            children: [
+                                                                (0, a.jsx)("span", { children: "Residence:" }),
+                                                                (0, a.jsx)("a", {
+                                                                    href: "#",
+                                                                    target: "_blank",
+                                                                    children: "Pakistan",
+                                                                }),
+                                                            ],
                                                         }),
                                                     ],
                                                 }),
                                             }),
                                             (0, a.jsx)("div", {
-                                                className: "col-md-5 col-lg-6",
-                                                children: (0, a.jsxs)("div", {
-                                                    className: "contact-content",
+                                                className: "bottom",
+                                                children: (0, a.jsxs)("ul", {
                                                     children: [
-                                                        (0, a.jsx)("div", {
-                                                            className: "top",
-                                                            children: (0, a.jsxs)("ul", {
-                                                                children: [
-                                                                    (0, a.jsxs)("li", {
-                                                                        children: [
-                                                                            (0, a.jsx)("span", { children: "Phone:" }),
-                                                                            (0, a.jsx)("a", {
-                                                                                href: "tel:+00932123456",
-                                                                                children: "+009 321 23456",
-                                                                            }),
-                                                                        ],
-                                                                    }),
-                                                                    (0, a.jsxs)("li", {
-                                                                        children: [
-                                                                            (0, a.jsx)("span", { children: "Email:" }),
-                                                                            (0, a.jsx)("a", {
-                                                                                href: "mailto:hello@reton.com",
-                                                                                children: "hello@reton.com",
-                                                                            }),
-                                                                        ],
-                                                                    }),
-                                                                    (0, a.jsxs)("li", {
-                                                                        children: [
-                                                                            (0, a.jsx)("span", {
-                                                                                children: "Website:",
-                                                                            }),
-                                                                            (0, a.jsx)("a", {
-                                                                                href: "#",
-                                                                                target: "_blank",
-                                                                                children: "www.reton.com",
-                                                                            }),
-                                                                        ],
-                                                                    }),
-                                                                    (0, a.jsxs)("li", {
-                                                                        children: [
-                                                                            (0, a.jsx)("span", {
-                                                                                children: "Address:",
-                                                                            }),
-                                                                            (0, a.jsx)("a", {
-                                                                                href: "#",
-                                                                                target: "_blank",
-                                                                                children: "12/7, Mc Street, Canada",
-                                                                            }),
-                                                                        ],
-                                                                    }),
-                                                                ],
+                                                        (0, a.jsx)("li", {
+                                                            children: (0, a.jsx)("a", {
+                                                                href: "https://facebook.com/",
+                                                                target: "_blank",
+                                                                children: (0, a.jsx)("i", { className: "bx bxl-facebook" }),
                                                             }),
                                                         }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "bottom",
-                                                            children: (0, a.jsxs)("ul", {
-                                                                children: [
-                                                                    (0, a.jsx)("li", {
-                                                                        children: (0, a.jsx)("a", {
-                                                                            href: "https://facebook.com/",
-                                                                            target: "_blank",
-                                                                            children: (0, a.jsx)("i", {
-                                                                                className: "bx bxl-facebook",
-                                                                            }),
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("li", {
-                                                                        children: (0, a.jsx)("a", {
-                                                                            href: "https://twitter.com/",
-                                                                            target: "_blank",
-                                                                            children: (0, a.jsx)("i", {
-                                                                                className: "bx bxl-twitter",
-                                                                            }),
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("li", {
-                                                                        children: (0, a.jsx)("a", {
-                                                                            href: "https://linkedin.com/",
-                                                                            target: "_blank",
-                                                                            children: (0, a.jsx)("i", {
-                                                                                className: "bx bxl-linkedin",
-                                                                            }),
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("li", {
-                                                                        children: (0, a.jsx)("a", {
-                                                                            href: "https://behance.com/",
-                                                                            target: "_blank",
-                                                                            children: (0, a.jsx)("i", {
-                                                                                className: "bx bxl-behance",
-                                                                            }),
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("li", {
-                                                                        children: (0, a.jsx)("a", {
-                                                                            href: "https://dribbble.com/",
-                                                                            target: "_blank",
-                                                                            children: (0, a.jsx)("i", {
-                                                                                className: "bx bxl-dribbble",
-                                                                            }),
-                                                                        }),
-                                                                    }),
-                                                                ],
+                                                        (0, a.jsx)("li", {
+                                                            children: (0, a.jsx)("a", {
+                                                                href: "https://twitter.com/",
+                                                                target: "_blank",
+                                                                children: (0, a.jsx)("i", { className: "bx bxl-twitter" }),
+                                                            }),
+                                                        }),
+                                                        (0, a.jsx)("li", {
+                                                            children: (0, a.jsx)("a", {
+                                                                href: "https://linkedin.com/",
+                                                                target: "_blank",
+                                                                children: (0, a.jsx)("i", { className: "bx bxl-linkedin" }),
+                                                            }),
+                                                        }),
+                                                        (0, a.jsx)("li", {
+                                                            children: (0, a.jsx)("a", {
+                                                                href: "https://behance.com/",
+                                                                target: "_blank",
+                                                                children: (0, a.jsx)("i", { className: "bx bxl-behance" }),
+                                                            }),
+                                                        }),
+                                                        (0, a.jsx)("li", {
+                                                            children: (0, a.jsx)("a", {
+                                                                href: "https://dribbble.com/",
+                                                                target: "_blank",
+                                                                children: (0, a.jsx)("i", { className: "bx bxl-dribbble" }),
                                                             }),
                                                         }),
                                                     ],
@@ -484,142 +361,21 @@
                                             }),
                                         ],
                                     }),
-                                ],
-                            }),
+                                }),
+                            ],
                         }),
-                    }));
-        },
+                    ],
+                }),
+            }),
+        });
+},
         95167: function (e, s, i) {
             "use strict";
             var a = i(57437);
             i(2265);
             var l = i(87138);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        className: "experience-area three border-bottom-two ptb-100",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
-                            children: [
-                                (0, a.jsxs)("div", {
-                                    className: "section-title three",
-                                    children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "EXPERIENCE" }),
-                                        (0, a.jsx)("h2", {
-                                            children: "I Have 6+ Years Of Experience With Many Awards",
-                                        }),
-                                        (0, a.jsx)("p", {
-                                            children:
-                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsxs)("div", {
-                                    className: "experience-content",
-                                    children: [
-                                        (0, a.jsx)("div", {
-                                            className: "experience-inner",
-                                            children: (0, a.jsxs)("ul", {
-                                                className: "align-items-center",
-                                                children: [
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", { children: "2014-2016" }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", {
-                                                            children: "Graphic Designer, Art Company, DC",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("p", {
-                                                            children:
-                                                                "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonum.",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "experience-inner",
-                                            children: (0, a.jsxs)("ul", {
-                                                className: "align-items-center",
-                                                children: [
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", { children: "2016-2017" }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", {
-                                                            children: "UX/UI Designer, Dribble",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("p", {
-                                                            children:
-                                                                "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonum.",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "experience-inner",
-                                            children: (0, a.jsxs)("ul", {
-                                                className: "align-items-center",
-                                                children: [
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", { children: "2017-2018" }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", {
-                                                            children: "Product Designer, Dribble",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("p", {
-                                                            children:
-                                                                "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonum.",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "experience-inner",
-                                            children: (0, a.jsxs)("ul", {
-                                                className: "align-items-center",
-                                                children: [
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", { children: "2018-2020" }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("span", {
-                                                            children: "Senior Designer, Dribble",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        children: (0, a.jsx)("p", {
-                                                            children:
-                                                                "Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam nonum.",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "text-center",
-                                            children: (0, a.jsx)(l.default, {
-                                                href: "/portfolio",
-                                                className: "common-btn three",
-                                                children: "See My Portfolio",
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                            ],
-                        }),
-                    }),
-                });
-        },
+            s.default = () => null;
+            },
         85789: function (e, s, i) {
             "use strict";
             var a = i(57437);
@@ -1212,29 +968,88 @@
                     }),
                 });
         },
-39048: function (e, s, i) {
-    "use strict";
-    s.default = () => {
-        if (typeof window !== 'undefined') {
-            // Remove elements immediately
-            const removeSkills = () => {
-                const elements = document.querySelectorAll('.skills-area');
-                elements.forEach(el => el.remove());
-            };
-            
-            // Run immediately
-            removeSkills();
-            
-            // Also run after DOM loads
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', removeSkills);
-            } else {
-                removeSkills();
-            }
-        }
-        return null;
-    };
-},
+        39048: function (e, s, i) {
+            "use strict";
+            var a = i(57437);
+            i(2265),
+                (s.default = () =>
+                    (0, a.jsx)(a.Fragment, {
+                        children: (0, a.jsx)("div", {
+                            className: "skills-area border-bottom-two ptb-100",
+                            children: (0, a.jsxs)("div", {
+                                className: "container",
+                                children: [
+                                    (0, a.jsxs)("div", {
+                                        className: "section-title three",
+                                        children: [
+                                            (0, a.jsx)("span", { className: "sub-title", children: "SKILLS" }),
+                                            (0, a.jsx)("h2", {
+                                                children: "Here's a look at my core skills and expertise.",
+                                            }),
+                                        ],
+                                    }),
+                                    (0, a.jsxs)("div", {
+                                        className: "skill-wrap",
+                                        children: [
+                                            (0, a.jsxs)("div", {
+                                                className: "skill",
+                                                children: [
+                                                    (0, a.jsx)("h3", { children: "JAVASCRIPT" }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "skill-bar skill1 wow fadeInLeftBig",
+                                                        children: (0, a.jsx)("span", {
+                                                            className: "skill-count1",
+                                                            children: "80%",
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                                className: "skill",
+                                                children: [
+                                                    (0, a.jsx)("h3", { children: "Jquery" }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "skill-bar skill2 wow fadeInLeftBig",
+                                                        children: (0, a.jsx)("span", {
+                                                            className: "skill-count2",
+                                                            children: "70%",
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                                className: "skill",
+                                                children: [
+                                                    (0, a.jsx)("h3", { children: "PHP" }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "skill-bar skill3 wow fadeInLeftBig",
+                                                        children: (0, a.jsx)("span", {
+                                                            className: "skill-count3",
+                                                            children: "80%",
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                                className: "skill",
+                                                children: [
+                                                    (0, a.jsx)("h3", { children: "CSS & Bootstrap" }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "skill-bar skill4 wow fadeInLeftBig",
+                                                        children: (0, a.jsx)("span", {
+                                                            className: "skill-count4",
+                                                            children: "98%",
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        }),
+                    }));
+        },
         43431: function (e, s, i) {
             "use strict";
             var a = i(57437);
@@ -1242,98 +1057,7 @@
             var l = i(53267),
                 r = i(5540),
                 n = i(66648);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        className: "review-area two three five border-bottom-two ptb-100",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
-                            children: [
-                                (0, a.jsxs)("div", {
-                                    className: "section-title three",
-                                    children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "TESTIMONIAL" }),
-                                        (0, a.jsx)("h2", {
-                                            children: "Some Generous Words Of My Satisfied Client Who Love My Work",
-                                        }),
-                                        (0, a.jsx)("p", {
-                                            children:
-                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsxs)(l.tq, {
-                                    effect: "fade",
-                                    navigation: !0,
-                                    modules: [r.xW, r.W_],
-                                    className: "mySwiper review-slider",
-                                    children: [
-                                        (0, a.jsx)(l.o5, {
-                                            children: (0, a.jsxs)("div", {
-                                                className: "review-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "bx bxs-quote-right" }),
-                                                    (0, a.jsx)("p", {
-                                                        children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim illo magni debitis in at culpa quidem eum molestiae reiciendis provident, officiis consequatur voluptates error maiores, pariatur natus ex quaerat",
-                                                    }),
-                                                    (0, a.jsx)(n.default, {
-                                                        src: "/images/review/review1.jpg",
-                                                        alt: "Review",
-                                                        width: 100,
-                                                        height: 100,
-                                                    }),
-                                                    (0, a.jsx)("h3", { children: "Andrew Smith" }),
-                                                    (0, a.jsx)("span", { children: "Web Developer" }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)(l.o5, {
-                                            children: (0, a.jsxs)("div", {
-                                                className: "review-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "bx bxs-quote-right" }),
-                                                    (0, a.jsx)("p", {
-                                                        children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim illo magni debitis in at culpa quidem eum molestiae reiciendis provident, officiis consequatur voluptates error maiores, pariatur natus ex quaerat",
-                                                    }),
-                                                    (0, a.jsx)(n.default, {
-                                                        src: "/images/review/review2.jpg",
-                                                        alt: "Review",
-                                                        width: 100,
-                                                        height: 100,
-                                                    }),
-                                                    (0, a.jsx)("h3", { children: "Tom Henry" }),
-                                                    (0, a.jsx)("span", { children: "UX/UI Designer" }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)(l.o5, {
-                                            children: (0, a.jsxs)("div", {
-                                                className: "review-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "bx bxs-quote-right" }),
-                                                    (0, a.jsx)("p", {
-                                                        children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim illo magni debitis in at culpa quidem eum molestiae reiciendis provident, officiis consequatur voluptates error maiores, pariatur natus ex quaerat",
-                                                    }),
-                                                    (0, a.jsx)(n.default, {
-                                                        src: "/images/review/review3.jpg",
-                                                        alt: "Review",
-                                                        width: 100,
-                                                        height: 100,
-                                                    }),
-                                                    (0, a.jsx)("h3", { children: "Jac Jacson" }),
-                                                    (0, a.jsx)("span", { children: "SEO Expert" }),
-                                                ],
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                            ],
-                        }),
-                    }),
-                });
+            s.default = () => null;
         },
         84666: function (e, s, i) {
             "use strict";
