@@ -1104,7 +1104,7 @@
                     }),
                 });
         },
-72744: function (e, s, i) {
+       72744: function (e, s, i) {
             "use strict";
             var a = i(57437);
             i(2265);
@@ -1122,11 +1122,11 @@
                                         (0, a.jsx)("span", { className: "sub-title", children: "SERVICES" }),
                                         (0, a.jsx)("h2", {
                                             children:
-                                                "Services That I Offer To My Clients For Their Ultimate Satisfaction",
+                                                "I Offer Special Service To My Client For Their Ultimate Satisfaction",
                                         }),
                                         (0, a.jsx)("p", {
                                             children:
-                                                "I offer services that are all about client satisfaction. I don't stop until my client is completely happy with the work. Their trust and satisfaction are what matter most to me. The services that I offer are.",
+                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
                                         }),
                                     ],
                                 }),
@@ -1141,12 +1141,23 @@
                                                     (0, a.jsx)("i", { className: "flaticon-global icon" }),
                                                     (0, a.jsx)("h3", {
                                                         children: (0, a.jsx)(l.default, {
-                                                            children: "Web Applications Development",
+                                                            href: "/services/details",
+                                                            target: "_blank",
+                                                            children: "Web Design",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
                                                         children:
                                                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                    (0, a.jsxs)(l.default, {
+                                                        href: "/services/details",
+                                                        className: "what-btn",
+                                                        target: "_blank",
+                                                        children: [
+                                                            "Explore More ",
+                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
+                                                        ],
                                                     }),
                                                 ],
                                             }),
@@ -1159,12 +1170,23 @@
                                                     (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
                                                     (0, a.jsx)("h3", {
                                                         children: (0, a.jsx)(l.default, {
-                                                            children: "Web Design",
+                                                            href: "/services/details",
+                                                            target: "_blank",
+                                                            children: "App Design",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
                                                         children:
                                                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                    (0, a.jsxs)(l.default, {
+                                                        href: "/services/details",
+                                                        className: "what-btn",
+                                                        target: "_blank",
+                                                        children: [
+                                                            "Explore More ",
+                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
+                                                        ],
                                                     }),
                                                 ],
                                             }),
@@ -1177,12 +1199,23 @@
                                                     (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
                                                     (0, a.jsx)("h3", {
                                                         children: (0, a.jsx)(l.default, {
-                                                            children: "Custom Web Solutions",
+                                                            href: "/services/details",
+                                                            target: "_blank",
+                                                            children: "Illustration",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
                                                         children:
                                                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                    (0, a.jsxs)(l.default, {
+                                                        href: "/services/details",
+                                                        className: "what-btn",
+                                                        target: "_blank",
+                                                        children: [
+                                                            "Explore More ",
+                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
+                                                        ],
                                                     }),
                                                 ],
                                             }),
@@ -1195,12 +1228,23 @@
                                                     (0, a.jsx)("i", { className: "flaticon-branding icon" }),
                                                     (0, a.jsx)("h3", {
                                                         children: (0, a.jsx)(l.default, {
-                                                            children: "Website Maintenance",
+                                                            href: "/services/details",
+                                                            target: "_blank",
+                                                            children: "Branding",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
                                                         children:
                                                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                    }),
+                                                    (0, a.jsxs)(l.default, {
+                                                        href: "/services/details",
+                                                        className: "what-btn",
+                                                        target: "_blank",
+                                                        children: [
+                                                            "Explore More ",
+                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
+                                                        ],
                                                     }),
                                                 ],
                                             }),
