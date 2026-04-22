@@ -1140,15 +1140,13 @@
                                                 children: [
                                                     (0, a.jsx)("i", { className: "flaticon-global icon" }),
                                                     (0, a.jsx)("h3", {
-                                                        children: (0, a.jsx)(l.default, {
-                                                            href: "/services/details",
-                                                            target: "_blank",
+                                                            style: { color: "white" },
                                                             children: "Web Application Development",
-                                                        }),
                                                     }),
                                                     (0, a.jsx)("p", {
+                                                        style: {textAlign: "justify"},
                                                         children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
+                                                            "I specialize in carefully building custom web applications tailored to your business needs. Whether it was a CRM, inventory system, booking platform, I design and develop solutions that are scalable, and user-friendly.",
                                                     }),
                                                 ],
                                             }),
@@ -1160,24 +1158,13 @@
                                                 children: [
                                                     (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
                                                     (0, a.jsx)("h3", {
-                                                        children: (0, a.jsx)(l.default, {
-                                                            href: "/services/details",
-                                                            target: "_blank",
-                                                            children: "App Design",
-                                                        }),
+                                                           style: { color: "white" },
+                                                            children: "Web Design",
                                                     }),
                                                     (0, a.jsx)("p", {
+                                                        style: {textAlign: "justify"},
                                                         children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                                    }),
-                                                    (0, a.jsxs)(l.default, {
-                                                        href: "/services/details",
-                                                        className: "what-btn",
-                                                        target: "_blank",
-                                                        children: [
-                                                            "Explore More ",
-                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
-                                                        ],
+                                                            "Web Designs that balance beauty and functionality. Every color, button, and layout is chosen carefully to give users a smooth and enjoyable experience. No clutter, no confusion just clean design that works.",
                                                     }),
                                                 ],
                                             }),
@@ -1189,24 +1176,13 @@
                                                 children: [
                                                     (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
                                                     (0, a.jsx)("h3", {
-                                                        children: (0, a.jsx)(l.default, {
-                                                            href: "/services/details",
-                                                            target: "_blank",
-                                                            children: "Illustration",
-                                                        }),
+                                                            style: { color: "white" },
+                                                            children: "Custom Web Solutions",
                                                     }),
                                                     (0, a.jsx)("p", {
+                                                        style: {textAlign: "justify"},
                                                         children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                                    }),
-                                                    (0, a.jsxs)(l.default, {
-                                                        href: "/services/details",
-                                                        className: "what-btn",
-                                                        target: "_blank",
-                                                        children: [
-                                                            "Explore More ",
-                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
-                                                        ],
+                                                            "Every business is different, so every solution should be different too. I build custom web solutions that fit your unique challenges completely and perfectly not the other way around.",
                                                     }),
                                                 ],
                                             }),
@@ -1218,24 +1194,13 @@
                                                 children: [
                                                     (0, a.jsx)("i", { className: "flaticon-branding icon" }),
                                                     (0, a.jsx)("h3", {
-                                                        children: (0, a.jsx)(l.default, {
-                                                            href: "/services/details",
-                                                            target: "_blank",
-                                                            children: "Branding",
-                                                        }),
+                                                            style: { color: "white" },
+                                                            children: "Website Maintenance",
                                                     }),
                                                     (0, a.jsx)("p", {
+                                                        style: {textAlign: "justify"},
                                                         children:
-                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                                    }),
-                                                    (0, a.jsxs)(l.default, {
-                                                        href: "/services/details",
-                                                        className: "what-btn",
-                                                        target: "_blank",
-                                                        children: [
-                                                            "Explore More ",
-                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
-                                                        ],
+                                                            "Website maintenance that boosts your site ranking by improving speed, security, and user experience. I handle technical SEO, bug fixes, performance tuning, and regular backups to grow your online presence.",
                                                     }),
                                                 ],
                                             }),
@@ -1247,101 +1212,29 @@
                     }),
                 });
         },
-        39048: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265),
-                (s.default = () =>
-                    (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)("div", {
-                            className: "skills-area border-bottom-two ptb-100",
-                            children: (0, a.jsxs)("div", {
-                                className: "container",
-                                children: [
-                                    (0, a.jsxs)("div", {
-                                        className: "section-title three",
-                                        children: [
-                                            (0, a.jsx)("span", { className: "sub-title", children: "SKILLS" }),
-                                            (0, a.jsx)("h2", {
-                                                children: "Here Are Some Overview Of My Skills Just Have A Look",
-                                            }),
-                                        ],
-                                    }),
-                                    (0, a.jsxs)("div", {
-                                        className: "skill-wrap",
-                                        children: [
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "JAVASCRIPT" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill1 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count1",
-                                                            children: "90%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "REACT JS" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill2 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count2",
-                                                            children: "70%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "ANGULAR JS" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill3 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count3",
-                                                            children: "80%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "PYTHON" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill4 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count4",
-                                                            children: "98%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "PHP" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill5 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count5",
-                                                            children: "78%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        ],
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }));
-        },
+39048: function (e, s, i) {
+    "use strict";
+    s.default = () => {
+        if (typeof window !== 'undefined') {
+            // Remove elements immediately
+            const removeSkills = () => {
+                const elements = document.querySelectorAll('.skills-area');
+                elements.forEach(el => el.remove());
+            };
+            
+            // Run immediately
+            removeSkills();
+            
+            // Also run after DOM loads
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', removeSkills);
+            } else {
+                removeSkills();
+            }
+        }
+        return null;
+    };
+},
         43431: function (e, s, i) {
             "use strict";
             var a = i(57437);
