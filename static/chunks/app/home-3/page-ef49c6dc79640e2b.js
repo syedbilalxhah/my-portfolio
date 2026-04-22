@@ -1141,6 +1141,8 @@
                                                     (0, a.jsx)("i", { className: "flaticon-global icon" }),
                                                     (0, a.jsx)("h3", {
                                                         children: (0, a.jsx)(l.default, {
+                                                            href: "/services/details",
+                                                            target: "_blank",
                                                             children: "Web Application Development",
                                                         }),
                                                     }),
