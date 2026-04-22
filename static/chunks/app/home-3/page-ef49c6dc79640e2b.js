@@ -1107,6 +1107,8 @@
 72744: function (e, s, i) {
     "use strict";
     var a = i(57437);
+    i(2265);
+    var l = i(87138);
     s.default = () =>
         (0, a.jsx)(a.Fragment, {
             children: (0, a.jsx)("div", {
@@ -1135,7 +1137,11 @@
                                         className: "what-item",
                                         children: [
                                             (0, a.jsx)("i", { className: "flaticon-global icon" }),
-                                            (0, a.jsx)("h3", { children: "Web Applications Development" }),
+                                            (0, a.jsx)("h3", {
+                                                children: (0, a.jsx)(l.default, {
+                                                    children: "Web Applications Development",
+                                                }),
+                                            }),
                                             (0, a.jsx)("p", {
                                                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
                                             }),
@@ -1148,7 +1154,11 @@
                                         className: "what-item",
                                         children: [
                                             (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
-                                            (0, a.jsx)("h3", { children: "Web Design" }),
+                                            (0, a.jsx)("h3", {
+                                                children: (0, a.jsx)(l.default, {
+                                                    children: "Web Design",
+                                                }),
+                                            }),
                                             (0, a.jsx)("p", {
                                                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
                                             }),
@@ -1161,7 +1171,11 @@
                                         className: "what-item",
                                         children: [
                                             (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
-                                            (0, a.jsx)("h3", { children: "Custom Web Solutions" }),
+                                            (0, a.jsx)("h3", {
+                                                children: (0, a.jsx)(l.default, {
+                                                    children: "Custom Web Solutions",
+                                                }),
+                                            }),
                                             (0, a.jsx)("p", {
                                                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
                                             }),
@@ -1174,7 +1188,11 @@
                                         className: "what-item",
                                         children: [
                                             (0, a.jsx)("i", { className: "flaticon-branding icon" }),
-                                            (0, a.jsx)("h3", { children: "Website Maintenance" }),
+                                            (0, a.jsx)("h3", {
+                                                children: (0, a.jsx)(l.default, {
+                                                    children: "Website Maintenance",
+                                                }),
+                                            }),
                                             (0, a.jsx)("p", {
                                                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
                                             }),
