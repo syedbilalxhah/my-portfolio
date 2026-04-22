@@ -1143,21 +1143,12 @@
                                                         children: (0, a.jsx)(l.default, {
                                                             href: "/services/details",
                                                             target: "_blank",
-                                                            children: "Web Design",
+                                                            children: "Web Application Development",
                                                         }),
                                                     }),
                                                     (0, a.jsx)("p", {
                                                         children:
                                                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum assumenda at doloribus dolore quae quibusdam",
-                                                    }),
-                                                    (0, a.jsxs)(l.default, {
-                                                        href: "/services/details",
-                                                        className: "what-btn",
-                                                        target: "_blank",
-                                                        children: [
-                                                            "Explore More ",
-                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
-                                                        ],
                                                     }),
                                                 ],
                                             }),
