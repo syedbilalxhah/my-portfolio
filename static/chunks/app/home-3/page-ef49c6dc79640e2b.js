@@ -34,8 +34,8 @@
                                         children: (0, a.jsx)("div", {
                                             className: "about-img-three",
                                             children: (0, a.jsx)(l.default, {
-                                                src: "/images/about4.jpg",
-                                                alt: "About",
+                                                src: "static/images/my-image.webp",
+                                                alt: "about-image",
                                                 width: 312,
                                                 height: 548,
                                             }),
@@ -593,7 +593,7 @@
                                 href: "/home-3",
                                 className: "navbar-brand logo",
                                 children: (0, a.jsx)(d.default, {
-                                    src: "static/images/1.png",
+                                    src: "static/images/logo.webp",
                                     alt: "logo",
                                     width: 300,
                                     height: 180,
