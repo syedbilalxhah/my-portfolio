@@ -1,1206 +1,663 @@
-(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-    [587],
-    {
-        75418: function (e, s, i) {
-            Promise.resolve().then(i.bind(i, 10881)),
-                Promise.resolve().then(i.bind(i, 97629)),
-                Promise.resolve().then(i.bind(i, 41144)),
-                Promise.resolve().then(i.bind(i, 95167)),
-                Promise.resolve().then(i.bind(i, 85789)),
-                Promise.resolve().then(i.bind(i, 47723)),
-                Promise.resolve().then(i.bind(i, 84560)),
-                Promise.resolve().then(i.bind(i, 40539)),
-                Promise.resolve().then(i.bind(i, 72744)),
-                Promise.resolve().then(i.bind(i, 39048)),
-                Promise.resolve().then(i.bind(i, 43431));
-        },
-        10881: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(66648);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        id: "about",
-                        className: "about-area border-bottom-two three ptb-100",
-                        children: (0, a.jsx)("div", {
-                            className: "container align-items-center",
-                            children: (0, a.jsxs)("div", {
-                                className: "row align-items-center",
-                                children: [
-                                    (0, a.jsx)("div", {
-                                        className: "col-lg-5",
-                                        children: (0, a.jsx)("div", {
-                                            className: "about-img-three",
-                                            children: (0, a.jsx)(l.default, {
-                                                src: "/images/about4.jpg",
-                                                alt: "About",
-                                                width: 312,
-                                                height: 548,
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("div", {
-                                        className: "col-lg-7",
-                                        children: (0, a.jsxs)("div", {
-                                            className: "about-content",
-                                            children: [
-                                                (0, a.jsxs)("div", {
-                                                    className: "section-title three",
-                                                    children: [
-                                                        (0, a.jsx)("span", {
-                                                            className: "sub-title",
-                                                            children: "ABOUT ME",
-                                                        }),
-                                                        (0, a.jsx)("h2", {
-                                                            children:
-                                                                "What Can I Do !",
-                                                        }),
-                                                        (0, a.jsx)("p", {
-                                                            children:
-                                                                "I'm a Full Stack Developer. I specialize in taking complex backend logics like databases, user authentication, server-side processing  and turning it into smooth, efficient, and reliable systems. I build custom websites, powerful admin panels, and scalable web applications that are secure, fast, and easy to maintain.",
-                                                        }),
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "row",
-                                                    children: [
-                                                        (0, a.jsx)("div", {
-                                                            className: "col-lg-6",
-                                                            children: (0, a.jsx)("div", {
-                                                                className: "left",
-                                                                children: (0, a.jsxs)("ul", {
-                                                                    children: [
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Age:",
-                                                                                }),
-                                                                                "24 Years",
-                                                                            ],
-                                                                        }),
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Residence:",
-                                                                                }),
-                                                                                "Pakistan",
-                                                                            ],
-                                                                        }),
-                                                                    ],
-                                                                }),
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "col-lg-6",
-                                                            children: (0, a.jsx)("div", {
-                                                                className: "right",
-                                                                children: (0, a.jsxs)("ul", {
-                                                                    children: [
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Phone:",
-                                                                                }),
-                                                                                (0, a.jsx)("a", {
-                                                                                    href: "tel:+923314070426",
-                                                                                    children: "+92 331 4070426",
-                                                                                }),
-                                                                            ],
-                                                                        }),
-                                                                        (0, a.jsxs)("li", {
-                                                                            children: [
-                                                                                (0, a.jsx)("span", {
-                                                                                    children: "Email:",
-                                                                                }),
-                                                                                (0, a.jsx)("a", {
-                                                                                    href: "mailto:syedbilal10ua@gamail.com",
-                                                                                    children: "syedbilal10ua@gmail.com",
-                                                                                }),
-                                                                            ],
-                                                                        }),
-                                                                    ],
-                                                                }),
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }),
-                });
-        },
-        97629: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138),
-                r = i(66648);
-            s.default = () => null;
-        },
-41144: function (e, s, i) {
-    "use strict";
-    var a = i(57437);
-    i(2265);
-    
-    // Email send karne ka function
-    const sendEmail = async (formData) => {
-        try {
-            const response = await fetch('https://formsubmit.co/ajax/syedbilal10ua@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    subject: formData.get('subject'),
-                    phone: formData.get('number'),
-                    message: formData.get('text'),
-                })
-            });
-            
-            if (response.ok) {
-                alert('Thank you! Your message has been sent successfully.');
-                document.getElementById('contactForm').reset();
-            } else {
-                alert('Something went wrong. Please try again.');
-            }
-        } catch (error) {
-            alert('Error sending message. Please try again.');
-        }
-    };
-    
-    s.default = () =>
-        (0, a.jsx)(a.Fragment, {
-            children: (0, a.jsx)("div", {
-                id: "contact",
-                className: "contact-area three border-bottom-two pt-100 pb-70",
-                children: (0, a.jsxs)("div", {
-                    className: "container",
-                    children: [
-                        (0, a.jsxs)("div", {
-                            className: "section-title three",
-                            children: [
-                                (0, a.jsx)("span", { className: "sub-title", children: "CONTACT" }),
-                                (0, a.jsx)("h2", {
-                                    children: "Have a project? Drop A Line Here and let's build something great.",
-                                }),
-                                (0, a.jsx)("p", {
-                                    children: "I'm available for freelance work and full-time projects. Whether you have a clear idea or just a rough concept reach out, and let's discuss how I can help.",
-                                }),
-                            ],
-                        }),
-                        (0, a.jsxs)("div", {
-                            className: "row align-items-center",
-                            children: [
-                                (0, a.jsx)("div", {
-                                    className: "col-md-7 col-lg-6",
-                                    children: (0, a.jsxs)("form", {
-                                        id: "contactForm",
-                                        onSubmit: (e) => {
-                                            e.preventDefault();
-                                            const formData = new FormData(e.target);
-                                            sendEmail(formData);
-                                        },
-                                        children: [
-                                            (0, a.jsx)("div", {
-                                                className: "form-group",
-                                                children: (0, a.jsx)("input", {
-                                                    type: "text",
-                                                    name: "name",
-                                                    className: "form-control",
-                                                    placeholder: "Name",
-                                                    required: true,
-                                                }),
-                                            }),
-                                            (0, a.jsx)("div", {
-                                                className: "form-group",
-                                                children: (0, a.jsx)("input", {
-                                                    type: "email",
-                                                    name: "email",
-                                                    className: "form-control",
-                                                    placeholder: "Email",
-                                                    required: true,
-                                                }),
-                                            }),
-                                            (0, a.jsx)("div", {
-                                                className: "form-group",
-                                                children: (0, a.jsx)("input", {
-                                                    type: "text",
-                                                    name: "subject",
-                                                    className: "form-control",
-                                                    placeholder: "Subject",
-                                                    required: true,
-                                                }),
-                                            }),
-                                            (0, a.jsx)("div", {
-                                                className: "form-group",
-                                                children: (0, a.jsx)("input", {
-                                                    type: "text",
-                                                    name: "number",
-                                                    className: "form-control",
-                                                    placeholder: "Phone",
-                                                }),
-                                            }),
-                                            (0, a.jsx)("div", {
-                                                className: "form-group",
-                                                children: (0, a.jsx)("textarea", {
-                                                    name: "text",
-                                                    className: "form-control",
-                                                    cols: "30",
-                                                    rows: "6",
-                                                    placeholder: "Write message",
-                                                    required: true,
-                                                }),
-                                            }),
-                                            (0, a.jsxs)("button", {
-                                                type: "submit",
-                                                className: "btn common-btn three",
-                                                children: ["Send Message ", (0, a.jsx)("span", {})],
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "col-md-5 col-lg-6",
-                                    children: (0, a.jsxs)("div", {
-                                        className: "contact-content",
-                                        children: [
-                                            (0, a.jsx)("div", {
-                                                className: "top",
-                                                children: (0, a.jsxs)("ul", {
-                                                    children: [
-                                                        (0, a.jsxs)("li", {
-                                                            children: [
-                                                                (0, a.jsx)("span", { children: "Phone:" }),
-                                                                (0, a.jsx)("a", {
-                                                                    href: "tel:+923314070426",
-                                                                    children: "+92 331 4070426",
-                                                                }),
-                                                            ],
-                                                        }),
-                                                        (0, a.jsxs)("li", {
-                                                            children: [
-                                                                (0, a.jsx)("span", { children: "Email:" }),
-                                                                (0, a.jsx)("a", {
-                                                                    href: "mailto:syedbilal10ua@gmail.com",
-                                                                    children: "syedbilal10ua@gmail.com",
-                                                                }),
-                                                            ],
-                                                        }),
-                                                        (0, a.jsxs)("li", {
-                                                            children: [
-                                                                (0, a.jsx)("span", { children: "Website:" }),
-                                                                (0, a.jsx)("a", {
-                                                                    href: "https://syedbilalxhah.github.io/my-portfolio/",
-                                                                    target: "_blank",
-                                                                    children: "syedbilalxhan.github.io/my-portfolio",
-                                                                }),
-                                                            ],
-                                                        }),
-                                                        (0, a.jsxs)("li", {
-                                                            children: [
-                                                                (0, a.jsx)("span", { children: "Residence:" }),
-                                                                (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: "Pakistan",
-                                                                }),
-                                                            ],
-                                                        }),
-                                                    ],
-                                                }),
-                                            }),
-                                            (0, a.jsx)("div", {
-                                                className: "bottom",
-                                                children: (0, a.jsxs)("ul", {
-                                                    children: [
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)("a", {
-                                                                href: "https://facebook.com/",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)("i", { className: "bx bxl-facebook" }),
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)("a", {
-                                                                href: "https://twitter.com/",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)("i", { className: "bx bxl-twitter" }),
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)("a", {
-                                                                href: "https://linkedin.com/",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)("i", { className: "bx bxl-linkedin" }),
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)("a", {
-                                                                href: "https://behance.com/",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)("i", { className: "bx bxl-behance" }),
-                                                            }),
-                                                        }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)("a", {
-                                                                href: "https://dribbble.com/",
-                                                                target: "_blank",
-                                                                children: (0, a.jsx)("i", { className: "bx bxl-dribbble" }),
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            }),
-        });
-},
-        95167: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138);
-            s.default = () => null;
-            },
-        85789: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265),
-                (s.default = () => {
-                    let e = new Date().getFullYear();
-                    return (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)("div", {
-                            className: "copyright-area three",
-                            children: (0, a.jsx)("div", {
-                                className: "container",
-                                children: (0, a.jsx)("div", {
-                                    className: "copyright-item",
-                                    children: (0, a.jsxs)("p", {
-                                        children: [
-                                            "Copyright @",
-                                            e,
-                                            " Design & Developed by",
-                                            " ",
-                                            (0, a.jsx)("a", {
-                                                href: "https://hibootstrap.com/",
-                                                target: "_blank",
-                                                children: "HiBootstrap",
-                                            }),
-                                        ],
-                                    }),
-                                }),
-                            }),
-                        }),
-                    });
-                });
-        },
-        47723: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsxs)("div", {
-                        id: "home",
-                        className: "banner-area border-bottom-two three",
-                        children: [
-                            (0, a.jsx)("div", {
-                                className: "common-right-text-two",
-                                children: (0, a.jsxs)("span", {
-                                    children: [
-                                        "Reton ",
-                                        (0, a.jsx)("br", {}),
-                                        " MILANOS ",
-                                        (0, a.jsx)("br", {}),
-                                        " HIGHLY ",
-                                        (0, a.jsx)("br", {}),
-                                        " EXPERIENCED ",
-                                        (0, a.jsx)("br", {}),
-                                        " WEB",
-                                        " ",
-                                        (0, a.jsx)("br", {}),
-                                        " DEVELOPER",
-                                    ],
-                                }),
-                            }),
-                            (0, a.jsx)("div", {
-                                className: "d-table",
-                                children: (0, a.jsx)("div", {
-                                    className: "d-table-cell",
-                                    children: (0, a.jsx)("div", {
-                                        className: "container",
-                                        children: (0, a.jsxs)("div", {
-                                            className: "banner-content",
-                                            children: [
-                                                (0, a.jsxs)("h1", {
-                                                    children: [(0, a.jsx)("span", { children: "Muhammad" }), " Bilal"],
-                                                }),
-                                                (0, a.jsxs)("p", {
-                                                    children: [
-                                                        "Hello I am a ",
-                                                        (0, a.jsx)("span", { children: "Full Stack Web Developer" }),
-                                                        " who builds real things and transforms your ideas into cutting-edge web solutions. I craft high performance web applications tailored to your business. My code is secure and actually maintainable. Tell me what you need and I'll make it happen.",
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "banner-btn-area",
-                                                    children: [
-                                                        (0, a.jsx)(l.default, {
-                                                            href: "#contact",
-                                                            className: "common-btn three",
-                                                            children: "Contact With Me",
-                                                        }),
-                                                        (0, a.jsx)(l.default, {
-                                                            href: "#contact",
-                                                            className: "common-btn banner-btn three",
-                                                            children: "Hire Me",
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                    }),
-                                }),
-                            }),
-                        ],
-                    }),
-                });
-        },
-        84560: function (e, s, i) {
-            "use strict";
-            var a = i(57437),
-                l = i(2265),
-                r = i(87138),
-                n = i(15326),
-                t = i.n(n),
-                c = i(84666),
-                d = i(66648);
-            s.default = () => {
-                let [e, s] = (0, l.useState)(!0),
-                    [i, n] = (0, l.useState)(!1),
-                    o = () => {
-                        s(!e);
-                    },
-                    h = () => {
-                        n(!i);
-                    };
-                (0, l.useEffect)(() => {
-                    let e = document.getElementById("navbar"),
-                        s = () => {
-                            window.scrollY > 170 ? e.classList.add("is-sticky") : e.classList.remove("is-sticky");
-                        };
-                    return (
-                        document.addEventListener("scroll", s),
-                        window.scrollTo(0, 0),
-                        m(),
-                        () => {
-                            document.removeEventListener("scroll", s);
-                        }
-                    );
-                }, []);
-                let m = () => {
-                    let e = document.querySelectorAll(".navbar-nav li a"),
-                        s = () => {
-                            let s = window.scrollY;
-                            e.forEach((e) => {
-                                if (e.hash) {
-                                    let i = document.querySelector(e.hash);
-                                    i.offsetTop <= s && i.offsetTop + i.offsetHeight > s
-                                        ? e.classList.add("active")
-                                        : e.classList.remove("active");
-                                }
-                            });
-                        };
-                    return (
-                        window.addEventListener("scroll", s),
-                        () => {
-                            window.removeEventListener("scroll", s);
-                        }
-                    );
-                };
-                return (0, a.jsxs)(a.Fragment, {
-                    children: [
-                        (0, a.jsx)("nav", {
-                            id: "navbar",
-                            className: "navbar navbar-expand-lg pufo-aside bg-0f1d22",
-                            children: (0, a.jsxs)("div", {
-                                className: "container",
-                                children: [
-                                    (0, a.jsx)(r.default, {
-                                        href: "/home-3",
-                                        className: "navbar-brand logo",
-                                        children: (0, a.jsx)(d.default, {
-                                            src: "static/images/1.png",
-                                            alt: "logo",
-                                            width: 250,
-                                            height: 150,
-                                        }),
-                                    }),
-                                    (0, a.jsxs)("button", {
-                                        onClick: o,
-                                        className: e
-                                            ? "navbar-toggler navbar-toggler-right collapsed"
-                                            : "navbar-toggler navbar-toggler-right",
-                                        type: "button",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#navbarSupportedContent",
-                                        "aria-controls": "navbarSupportedContent",
-                                        "aria-expanded": "false",
-                                        "aria-label": "Toggle navigation",
-                                        children: [
-                                            (0, a.jsx)("span", { className: "icon-bar top-bar" }),
-                                            (0, a.jsx)("span", { className: "icon-bar middle-bar" }),
-                                            (0, a.jsx)("span", { className: "icon-bar bottom-bar" }),
-                                        ],
-                                    }),
-                                    (0, a.jsxs)("div", {
-                                        className: e ? "collapse navbar-collapse" : "navbar-collapse collapse show",
-                                        id: "navbarSupportedContent",
-                                        children: [
-                                            (0, a.jsxs)("ul", {
-                                                className: "navbar-nav",
-                                                children: [
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => 100,
-                                                            className: "nav-link active",
-                                                            href: "#home",
-                                                            children: "Home",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#about",
-                                                            children: "About",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#portfolio",
-                                                            children: "Portfolio",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#blog",
-                                                            children: "Blog",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#contact",
-                                                            children: "Contact",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "aside-footer",
-                                                children: [
-                                                    (0, a.jsxs)(r.default, {
-                                                        href: "#",
-                                                        className: "common-btn three",
-                                                        children: [
-                                                            "Download CV ",
-                                                            (0, a.jsx)("i", { className: "bx bxs-download" }),
-                                                        ],
-                                                    }),
-                                                    (0, a.jsxs)("ul", {
-                                                        className: "social",
-                                                        children: [
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-facebook",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-twitter",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-linkedin",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-behance",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                        ],
-                                                    }),
-                                                ],
-                                            }),
-                                        ],
-                                    }),
-                                ],
-                            }),
-                        }),
-                        (0, a.jsx)("div", {
-                            className: "demo-side-icon",
-                            children: (0, a.jsx)("button", {
-                                type: "button",
-                                className: "modal-btn",
-                                onClick: h,
-                                children: (0, a.jsx)("span", { children: "Demos" }),
-                            }),
-                        }),
-                        (0, a.jsx)(c.Z, { onClick: h, active: i ? "show" : "" }),
-                    ],
-                });
-            };
-        },
-        40539: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138),
-                r = i(66648);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        id: "portfolio",
-                        className: "projects-area border-bottom-two ptb-100",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
-                            children: [
-                                (0, a.jsxs)("div", {
-                                    className: "section-title three",
-                                    children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "PROJECTS" }),
-                                        (0, a.jsx)("h2", {
-                                            children: "Here Are Some Projects Which Gain A Great Success",
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsxs)("div", {
-                                    className: "row",
-                                    children: [
-                                        (0, a.jsxs)("div", {
-                                            className: "col-sm-6 col-lg-7",
-                                            children: [
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project1.jpg",
-                                                            alt: "Projects",
-                                                            width: 518,
-                                                            height: 357,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Furniture Website",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Logo" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project2.jpg",
-                                                            alt: "Projects",
-                                                            width: 518,
-                                                            height: 452,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Travel App Logo Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "App" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                        (0, a.jsxs)("div", {
-                                            className: "col-sm-6 col-lg-5",
-                                            children: [
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item two",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project3.jpg",
-                                                            alt: "Projects",
-                                                            width: 344,
-                                                            height: 457,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "ERP Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Design" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item two",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project4.jpg",
-                                                            alt: "Projects",
-                                                            width: 344,
-                                                            height: 352,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Restaurant Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Restaurant" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "text-center",
-                                    children: (0, a.jsx)(l.default, {
-                                        href: "/works",
-                                        className: "common-btn three",
-                                        target: "_blank",
-                                        children: "Explore Projects",
-                                    }),
-                                }),
-                            ],
-                        }),
-                    }),
-                });
-        },
-       72744: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        className: "what-area three border-bottom-two pt-100 pb-70",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
-                            children: [
-                                (0, a.jsxs)("div", {
-                                    className: "section-title three",
-                                    children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "SERVICES" }),
-                                        (0, a.jsx)("h2", {
-                                            children:
-                                                "I Offer Special Service To My Client For Their Ultimate Satisfaction",
-                                        }),
-                                        (0, a.jsx)("p", {
-                                            children:
-                                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero eos et accusam et.",
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsxs)("div", {
-                                    className: "row",
-                                    children: [
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "what-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "flaticon-global icon" }),
-                                                    (0, a.jsx)("h3", {
-                                                            style: { color: "white" },
-                                                            children: "Web Application Development",
-                                                    }),
-                                                    (0, a.jsx)("p", {
-                                                        style: {textAlign: "justify"},
-                                                        children:
-                                                            "I specialize in carefully building custom web applications tailored to your business needs. Whether it was a CRM, inventory system, booking platform, I design and develop solutions that are scalable, and user-friendly.",
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "what-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "flaticon-smartphone icon" }),
-                                                    (0, a.jsx)("h3", {
-                                                           style: { color: "white" },
-                                                            children: "Web Design",
-                                                    }),
-                                                    (0, a.jsx)("p", {
-                                                        style: {textAlign: "justify"},
-                                                        children:
-                                                            "Web Designs that balance beauty and functionality. Every color, button, and layout is chosen carefully to give users a smooth and enjoyable experience. No clutter, no confusion just clean design that works.",
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "what-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "flaticon-paintbrush icon" }),
-                                                    (0, a.jsx)("h3", {
-                                                            style: { color: "white" },
-                                                            children: "Custom Web Solutions",
-                                                    }),
-                                                    (0, a.jsx)("p", {
-                                                        style: {textAlign: "justify"},
-                                                        children:
-                                                            "Every business is different, so every solution should be different too. I build custom web solutions that fit your unique challenges completely and perfectly not the other way around.",
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                        (0, a.jsx)("div", {
-                                            className: "col-sm-6 col-lg-6",
-                                            children: (0, a.jsxs)("div", {
-                                                className: "what-item",
-                                                children: [
-                                                    (0, a.jsx)("i", { className: "flaticon-branding icon" }),
-                                                    (0, a.jsx)("h3", {
-                                                            style: { color: "white" },
-                                                            children: "Website Maintenance",
-                                                    }),
-                                                    (0, a.jsx)("p", {
-                                                        style: {textAlign: "justify"},
-                                                        children:
-                                                            "Website maintenance that boosts your site ranking by improving speed, security, and user experience. I handle technical SEO, bug fixes, performance tuning, and regular backups to grow your online presence.",
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                            ],
-                        }),
-                    }),
-                });
-        },
-        39048: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265),
-                (s.default = () =>
-                    (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)("div", {
-                            className: "skills-area border-bottom-two ptb-100",
-                            children: (0, a.jsxs)("div", {
-                                className: "container",
-                                children: [
-                                    (0, a.jsxs)("div", {
-                                        className: "section-title three",
-                                        children: [
-                                            (0, a.jsx)("span", { className: "sub-title", children: "SKILLS" }),
-                                            (0, a.jsx)("h2", {
-                                                children: "Here's a look at my core skills and expertise.",
-                                            }),
-                                        ],
-                                    }),
-                                    (0, a.jsxs)("div", {
-                                        className: "skill-wrap",
-                                        children: [
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "JAVASCRIPT" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill1 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count1",
-                                                            children: "80%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "Jquery" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill2 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count2",
-                                                            children: "70%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "PHP" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill3 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count3",
-                                                            children: "80%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, a.jsxs)("div", {
-                                                className: "skill",
-                                                children: [
-                                                    (0, a.jsx)("h3", { children: "CSS & Bootstrap" }),
-                                                    (0, a.jsx)("div", {
-                                                        className: "skill-bar skill4 wow fadeInLeftBig",
-                                                        children: (0, a.jsx)("span", {
-                                                            className: "skill-count4",
-                                                            children: "98%",
-                                                        }),
-                                                    }),
-                                                ],
-                                            }),
-                                        ],
-                                    }),
-                                ],
-                            }),
-                        }),
-                    }));
-        },
-        43431: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(53267),
-                r = i(5540),
-                n = i(66648);
-            s.default = () => null;
-        },
-        84666: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(66648);
-            s.Z = (e) => {
-                let { active: s, onClick: i } = e;
-                return (0, a.jsxs)("div", {
-                    className: "demos-side-content ".concat(s),
-                    children: [
-                        (0, a.jsxs)("div", {
-                            className: "modal-header px-4 py-3 border-bottom",
-                            children: [
-                                (0, a.jsx)("h2", { children: "View Demo" }),
-                                (0, a.jsx)("button", {
-                                    type: "button",
-                                    className: "close",
-                                    onClick: () => {
-                                        i();
-                                    },
-                                    children: (0, a.jsx)("span", { "aria-hidden": "true", children: "\xd7" }),
-                                }),
-                            ],
-                        }),
-                        (0, a.jsx)("div", {
-                            className: "modal-body",
-                            children: (0, a.jsxs)("ul", {
-                                children: [
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 1" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo1.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/home-2",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 2" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo2.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/home-3",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 3" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo3.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/home-4",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 4" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo4.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/home-5",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 5" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo5.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                    (0, a.jsx)("li", {
-                                        children: (0, a.jsx)("div", {
-                                            className: "demo-item",
-                                            children: (0, a.jsxs)("a", {
-                                                href: "/home-6",
-                                                children: [
-                                                    (0, a.jsx)("span", { children: "Demo - 6" }),
-                                                    (0, a.jsx)(l.default, {
-                                                        src: "/images/demos/demo6.jpg",
-                                                        alt: "Demos",
-                                                        width: 200,
-                                                        height: 200,
-                                                    }),
-                                                ],
-                                            }),
-                                        }),
-                                    }),
-                                ],
-                            }),
-                        }),
-                    ],
-                });
-            };
-        },
-    },
-    function (e) {
-        e.O(0, [974, 417, 971, 23, 744], function () {
-            return e((e.s = 75418));
-        }),
-            (_N_E = e.O());
-    },
-]);
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="static/css/e38bd011d5c564b6.css" data-precedence="next" />
+        <link rel="stylesheet" href="static/css/4617491836b2e63c.css" data-precedence="next" />
+        <link rel="stylesheet" href="static/css/11d53054ef1de2ab.css" data-precedence="next" />
+        <link rel="stylesheet" href="static/css/848ccaa4b45055ab.css" data-precedence="next" />
+        <link rel="stylesheet" href="static/css/4922ac44b5838cf3.css" data-precedence="next" />
+        <link rel="stylesheet" href="static/css/b8c6da8be52615ff.css" data-precedence="next" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        <link rel="preload" as="script" fetchpriority="low" href="static/chunks/webpack-7d294d50208950b3.js" />
+        
+        <script src="static/chunks/fd9d1056-ffbf7aa05e76a52a.js" async=""></script>
+        <script src="static/chunks/23-dbec9d82a8122c32.js" async=""></script>
+        <script src="static/chunks/main-app-7fb77017b2a4ce6b.js" async=""></script>
+        <script src="static/chunks/974-a7fb2faa7ca97d6e.js" async=""></script>
+        <script src="static/chunks/417-d28c90ba4015300d.js" async=""></script>
+        <script src="static/chunks/app/home-3/page-ef49c6dc79640e2b.js" async=""></script>
+        <script src="static/chunks/app/layout-4de150923b5988ab.js" async=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        <title>Syed Muhammad Bilal - My Porfolio </title>
+        <meta name="description" content="Resume CV React Nextjs Template" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16" />
+        <script src="static/chunks/polyfills-78c92fac7aa8fdd8.js" nomodule=""></script>
+    </head>
+    <body class="__variable_fa832b __variable_e0630c">
+        <div class="body-bg-five">
+            <div class="main-area two">
+                <nav id="navbar" class="navbar navbar-expand-lg pufo-aside bg-0f1d22">
+                    <div class="container">
+                    <button
+                            class="navbar-toggler navbar-toggler-right collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span
+                            ><span class="icon-bar bottom-bar"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            </ul>
+                            <div class="aside-footer">
+                                <a class="common-btn three" href="#">Download Resume <i class="bx bxs-download"></i></a>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="bx bxl-behance"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="main-content two">
+                    <div id="home" class="banner-area border-bottom-two three">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="container">
+                                    <div class="banner-content">
+                                      <h1">Muhammad <span>Bilal</span></h1>
+                                        <p>
+                                            Hello, I'm a <span>Full Stack Web Developer</span> who builds real things and transforms your ideas into cutting-edge web solutions. 
+                                            I craft high-performance web applications tailored to your business.
+                                            My code is clean, secure, and actually maintainable. Tell me what you need, and I'll make it happen.
+                                        </p>
+                                        <div class="banner-btn-area">
+                                            <a class="common-btn three" href="#contact">Contact With Me</a
+                                            ><a class="common-btn banner-btn three" href="#contact">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about" class="about-area border-bottom-two three ptb-100">
+                        <div class="container align-items-center">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img-three">
+                                        <img
+                                            alt="About"
+                                            loading="lazy"
+                                            width="312"
+                                            height="548"
+                                            decoding="async"
+                                            data-nimg="1"
+                                            style="color: transparent"
+                                            src="images/about4.jpg"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="about-content">
+                                        <div class="section-title three">
+                                            <span class="sub-title">ABOUT ME</span>
+                                            <h2>
+                                                I am a Developer, specialized in Developing Web Applicaion in PHP and JavaScript
+                                            </h2>
+                                            <p>
+                                              I'm a Full Stack Developer who turns complex backend logic into smooth, working systems. 
+                                              I specialize in building custom websites, powerful admin panels, and scalable web applications. 
+                                            </p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="left">
+                                                    <ul>
+                                                        <li><span>Age:</span>26 Years</li>
+                                                        <li><span>Residence:</span>San Francisco</li>
+                                                        <li>
+                                                            <span>Address:</span
+                                                            ><a href="#" target="_blank">12/7, Mc Street, Canada</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="what-area three border-bottom-two pt-100 pb-70">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">SERVICES</span>
+                                <h2>I Offer Special Service To My Client For Their Ultimate Satisfaction</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero
+                                    eos et accusam et.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="what-item">
+                                    <i class="flaticon-global icon"></i>
+                                        <h3><a target="_blank" href="services/details/index.html">Web Design</a></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            assumenda at doloribus dolore quae quibusdam
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="what-item">
+                                        <i class="fas fa-mobile-alt icon"></i>
+                                        <h3><a target="_blank" href="services/details/index.html">App Design</a></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            assumenda at doloribus dolore quae quibusdam
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="what-item">
+                                        <i class="fas fa-paintbrush icon"></i>
+                                        <h3>
+                                            <a target="_blank" href="services/details/index.html">Illustration</a>
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            assumenda at doloribus dolore quae quibusdam
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="what-item">
+                                        <i class="fas fa-chart-line icon"></i>
+                                        <h3><a target="_blank" href="services/details/index.html">Branding</a></h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            assumenda at doloribus dolore quae quibusdam
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-area border-bottom-two ptb-100">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">SKILLS</span>
+                                <h2>Here Are Some Overview Of My Skills Just Have A Look</h2>
+                            </div>
+                            <div class="skill-wrap">
+                                <div class="skill">
+                                    <h3>JAVASCRIPT</h3>
+                                    <div class="skill-bar skill1 wow fadeInLeftBig">
+                                        <span class="skill-count1">90%</span>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <h3>REACT JS</h3>
+                                    <div class="skill-bar skill2 wow fadeInLeftBig">
+                                        <span class="skill-count2">70%</span>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <h3>ANGULAR JS</h3>
+                                    <div class="skill-bar skill3 wow fadeInLeftBig">
+                                        <span class="skill-count3">80%</span>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <h3>PYTHON</h3>
+                                    <div class="skill-bar skill4 wow fadeInLeftBig">
+                                        <span class="skill-count4">98%</span>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <h3>PHP</h3>
+                                    <div class="skill-bar skill5 wow fadeInLeftBig">
+                                        <span class="skill-count5">78%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="portfolio" class="projects-area border-bottom-two ptb-100">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">PROJECTS</span>
+                                <h2>Here Are Some Projects Which Gain A Great Success</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-7">
+                                    <div class="projects-item">
+                                        <img
+                                            alt="Projects"
+                                            loading="lazy"
+                                            width="518"
+                                            height="357"
+                                            decoding="async"
+                                            data-nimg="1"
+                                            style="color: transparent"
+                                            src="images/projects/project1.jpg"
+                                        />
+                                        <div class="inner">
+                                            <div class="inner">
+                                                <h3>
+                                                    <a target="_blank" href="works/details/index.html"
+                                                        >Furniture Website</a
+                                                    >
+                                                </h3>
+                                                <span>Logo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="projects-item">
+                                        <img
+                                            alt="Projects"
+                                            loading="lazy"
+                                            width="518"
+                                            height="452"
+                                            decoding="async"
+                                            data-nimg="1"
+                                            style="color: transparent"
+                                            src="images/projects/project2.jpg"
+                                        />
+                                        <div class="inner">
+                                            <div class="inner">
+                                                <h3>
+                                                    <a target="_blank" href="works/details/index.html"
+                                                        >Travel App Logo Design</a
+                                                    >
+                                                </h3>
+                                                <span>App</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-5">
+                                    <div class="projects-item two">
+                                        <img
+                                            alt="Projects"
+                                            loading="lazy"
+                                            width="344"
+                                            height="457"
+                                            decoding="async"
+                                            data-nimg="1"
+                                            style="color: transparent"
+                                            src="images/projects/project3.jpg"
+                                        />
+                                        <div class="inner">
+                                            <div class="inner">
+                                                <h3>
+                                                    <a target="_blank" href="works/details/index.html">ERP Design</a>
+                                                </h3>
+                                                <span>Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="projects-item two">
+                                        <img
+                                            alt="Projects"
+                                            loading="lazy"
+                                            width="344"
+                                            height="352"
+                                            decoding="async"
+                                            data-nimg="1"
+                                            style="color: transparent"
+                                            src="images/projects/project4.jpg"
+                                        />
+                                        <div class="inner">
+                                            <div class="inner">
+                                                <h3>
+                                                    <a target="_blank" href="works/details/index.html"
+                                                        >Restaurant Design</a
+                                                    >
+                                                </h3>
+                                                <span>Restaurant</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="common-btn three" target="_blank" href="works/index.html"
+                                    >Explore Projects</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="blog" class="blog-area three border-bottom-two pt-100 pb-70">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">BLOG</span>
+                                <h2>Read My Blog To Know More About My Design Process</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero
+                                    eos et accusam et.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="blog-item">
+                                        <div class="top">
+                                            <a target="_blank" href="blog/details/index.html"
+                                                ><img
+                                                    alt="Blog"
+                                                    loading="lazy"
+                                                    width="510"
+                                                    height="400"
+                                                    decoding="async"
+                                                    data-nimg="1"
+                                                    style="color: transparent"
+                                                    src="images/blog/blog10.jpg"
+                                            /></a>
+                                            <h4>12 <span>Oct</span></h4>
+                                        </div>
+                                        <div class="bottom">
+                                            <h3>
+                                                <a target="_blank" href="blog/details/index.html"
+                                                    >How To Improve Design Sense &amp; Skill To Manage Design Work</a
+                                                >
+                                            </h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam
+                                                nonumy eirmod tempor invidunt
+                                            </p>
+                                            <a class="blog-btn" target="_blank" href="blog/details/index.html"
+                                                >Read More <i class="flaticon-right-arrow"></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="blog-item">
+                                        <div class="top">
+                                            <a target="_blank" href="blog/details/index.html"
+                                                ><img
+                                                    alt="Blog"
+                                                    loading="lazy"
+                                                    width="510"
+                                                    height="400"
+                                                    decoding="async"
+                                                    data-nimg="1"
+                                                    style="color: transparent"
+                                                    src="images/blog/blog11.jpg"
+                                            /></a>
+                                            <h4>13 <span>Oct</span></h4>
+                                        </div>
+                                        <div class="bottom">
+                                            <h3>
+                                                <a target="_blank" href="blog/details/index.html"
+                                                    >How Design Became Fun In My Life &amp; Took The Empty Space Of
+                                                    Heart</a
+                                                >
+                                            </h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consete tur sadipscing elitr, sed diam
+                                                nonumy eirmod tempor invidunt
+                                            </p>
+                                            <a class="blog-btn" target="_blank" href="blog/details/index.html"
+                                                >Read More <i class="flaticon-right-arrow"></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-area two three five border-bottom-two ptb-100">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">TESTIMONIAL</span>
+                                <h2>Some Generous Words Of My Satisfied Client Who Love My Work</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero
+                                    eos et accusam et.
+                                </p>
+                            </div>
+                            <div class="swiper mySwiper review-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="review-item">
+                                            <i class="bx bxs-quote-right"></i>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim
+                                                illo magni debitis in at culpa quidem eum molestiae reiciendis
+                                                provident, officiis consequatur voluptates error maiores, pariatur natus
+                                                ex quaerat
+                                            </p>
+                                            <img
+                                                alt="Review"
+                                                loading="lazy"
+                                                width="100"
+                                                height="100"
+                                                decoding="async"
+                                                data-nimg="1"
+                                                style="color: transparent"
+                                                src="images/review/review1.jpg"
+                                            />
+                                            <h3>Andrew Smith</h3>
+                                            <span>Web Developer</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="review-item">
+                                            <i class="bx bxs-quote-right"></i>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim
+                                                illo magni debitis in at culpa quidem eum molestiae reiciendis
+                                                provident, officiis consequatur voluptates error maiores, pariatur natus
+                                                ex quaerat
+                                            </p>
+                                            <img
+                                                alt="Review"
+                                                loading="lazy"
+                                                width="100"
+                                                height="100"
+                                                decoding="async"
+                                                data-nimg="1"
+                                                style="color: transparent"
+                                                src="images/review/review2.jpg"
+                                            />
+                                            <h3>Tom Henry</h3>
+                                            <span>UX/UI Designer</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="review-item">
+                                            <i class="bx bxs-quote-right"></i>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus enim
+                                                illo magni debitis in at culpa quidem eum molestiae reiciendis
+                                                provident, officiis consequatur voluptates error maiores, pariatur natus
+                                                ex quaerat
+                                            </p>
+                                            <img
+                                                alt="Review"
+                                                loading="lazy"
+                                                width="100"
+                                                height="100"
+                                                decoding="async"
+                                                data-nimg="1"
+                                                style="color: transparent"
+                                                src="images/review/review3.jpg"
+                                            />
+                                            <h3>Jac Jacson</h3>
+                                            <span>SEO Expert</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contact" class="contact-area three border-bottom-two pt-100 pb-70">
+                        <div class="container">
+                            <div class="section-title three">
+                                <span class="sub-title">CONTACT</span>
+                                <h2>Yes! You Are Here! Have You Any Project? Drop A Line Here</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, seddiam voluptua. At vero
+                                    eos et accusam et.
+                                </p>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-7 col-lg-6">
+                                    <form id="contactForm">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name" name="name" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Email" name="email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Subject"
+                                                name="subject"
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Phone" name="number" />
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea
+                                                name="text"
+                                                class="form-control"
+                                                cols="30"
+                                                rows="6"
+                                                placeholder="Write message"
+                                            ></textarea>
+                                        </div>
+                                        <button type="submit" class="btn common-btn three">
+                                            Send Message <span></span>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-5 col-lg-6">
+                                    <div class="contact-content">
+                                        <div class="top">
+                                            <ul>
+                                                <li>
+                                                    <span>Phone:</span><a href="tel:+00932123456">+009 321 23456</a>
+                                                </li>
+                                                <li>
+                                                    <span>Email:</span
+                                                    ><a
+                                                        href="#"
+                                                        ><span>[email&#160;protected]</span
+                                                        ></a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <span>Website:</span><a href="#" target="_blank">www.reton.com</a>
+                                                </li>
+                                                <li>
+                                                    <span>Address:</span
+                                                    ><a href="#" target="_blank">12/7, Mc Street, Canada</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://facebook.com/" target="_blank"
+                                                        ><i class="bx bxl-facebook"></i
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://twitter.com/" target="_blank"
+                                                        ><i class="bx bxl-twitter"></i
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://linkedin.com/" target="_blank"
+                                                        ><i class="bx bxl-linkedin"></i
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://behance.com/" target="_blank"
+                                                        ><i class="bx bxl-behance"></i
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://dribbble.com/" target="_blank"
+                                                        ><i class="bx bxl-dribbble"></i
+                                                    ></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area three">
+                        <div class="container">
+                            <div class="copyright-item">
+                                <p>
+                                    Copyright @<!-- -->2026<!-- -->
+                                    Developed by<!-- -->
+                                    <a href="https://syedbilalxhah.github.io/my-portfolio/" target="_blank">Muhammad Bilal</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="static/chunks/webpack-7d294d50208950b3.js" async=""></script>
+        <script>
+            (self.__next_f = self.__next_f || []).push([0]);
+            self.__next_f.push([2, null]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '1:HL["/static/css/e38bd011d5c564b6.css","style"]\n2:HL["/static/css/4617491836b2e63c.css","style"]\n3:HL["/static/css/11d53054ef1de2ab.css","style"]\n4:HL["/static/css/848ccaa4b45055ab.css","style"]\n5:HL["/static/css/4922ac44b5838cf3.css","style"]\n6:HL["/static/css/b8c6da8be52615ff.css","style"]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '7:I[95751,[],""]\n9:I[84560,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\na:I[47723,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\nb:I[10881,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\nc:I[72744,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\nd:I[95167,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\ne:I[39048,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\nf:I[40539,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\n10:I[97629,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\n11:I[43431,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\n12:I[41144,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\n13:I[85789,["974","static/chunks/974-a7fb2faa7ca97d6e.js","417","static/chunks/417-d28c90ba4015300d.js","587","static/chunks/app/home-3/page-ef49c6dc79640e2b.js"],"default"]\n14:I[39275,[],""]\n15:I[61343,[],""]\n16:I[7602,["185","static/chunks/app/layout-4de150923b5988ab.js"],"default"]\n18:I[76130,[',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([1, '],""]\n19:[]\n']);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '0:[[["$","link","0",{"rel":"stylesheet","href":"/static/css/e38bd011d5c564b6.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/static/css/4617491836b2e63c.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/static/css/11d53054ef1de2ab.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/static/css/848ccaa4b45055ab.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/static/css/4922ac44b5838cf3.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/static/css/b8c6da8be52615ff.css","precedence":"next","crossOrigin":"$undefined"}]],["$","$L7",null,{"buildId":"rHr1M2x0rQGra2B0D2HVU","assetPrefix":"","initialCanonicalUrl":"/home-3/","initialTree":["",{"children":["home-3",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"initialSeedData":["",{"children":["home-3",{"children":["__PAGE__",{},[["$L8",["$","div",null,{"className":"body-bg-five","children":["$","div",null,{"className":"main-area two","children":[["$","$L9",null,{}],["$","div",null,{"className":"main-content two","children":[["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}]]}]]}]}]],null],null]},["$","$L14",null,{"parallelRouterKey":"children","segmentPath":["children","home-3","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L15",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_fa832b __variable_e0630c","children":[["$","$L14",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L15",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}],["$","$L16",null,{}]]}]}],null],null],"couldBeIntercepted":false,"initialHead":[false,"$L17"],"globalErrorComponent":"$18","missingSlots":"$W19"}]]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '17:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Muhammad Bilal - My Portfolio"}],["$","meta","3",{"name":"description","content":"Resume CV React Nextjs Template"}],["$","link","4",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]\n8:null\n',
+            ]);
+        </script>
+    </body>
+</html>
