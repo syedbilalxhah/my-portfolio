@@ -392,14 +392,14 @@
                                                         }),
                                                         (0, a.jsx)("li", {
                                                             children: (0, a.jsx)("a", {
-                                                                href: "https://linkedin.com/",
+                                                                href: "https://www.linkedin.com/in/syed-bilal26/",
                                                                 target: "_blank",
                                                                 children: (0, a.jsx)("i", { className: "bx bxl-linkedin" }),
                                                             }),
                                                         }),
                                                         (0, a.jsx)("li", {
                                                             children: (0, a.jsx)("a", {
-                                                                href: "https://behance.com/",
+                                                                href: "https://syedbilalxhah.github.io/my-portfolio/",
                                                                 target: "_blank",
                                                                 children: (0, a.jsx)("i", { className: "bx bx-globe" }),
                                                             }),
@@ -529,203 +529,204 @@
                     }),
                 });
         },
-        84560: function (e, s, i) {
-            "use strict";
-            var a = i(57437),
-                l = i(2265),
-                r = i(87138),
-                n = i(15326),
-                t = i.n(n),
-                c = i(84666),
-                d = i(66648);
-            s.default = () => {
-                let [e, s] = (0, l.useState)(!0),
-                    [i, n] = (0, l.useState)(!1),
-                    o = () => {
-                        s(!e);
-                    },
-                    h = () => {
-                        n(!i);
-                    };
-                (0, l.useEffect)(() => {
-                    let e = document.getElementById("navbar"),
-                        s = () => {
-                            window.scrollY > 170 ? e.classList.add("is-sticky") : e.classList.remove("is-sticky");
-                        };
-                    return (
-                        document.addEventListener("scroll", s),
-                        window.scrollTo(0, 0),
-                        m(),
-                        () => {
-                            document.removeEventListener("scroll", s);
-                        }
-                    );
-                }, []);
-                let m = () => {
-                    let e = document.querySelectorAll(".navbar-nav li a"),
-                        s = () => {
-                            let s = window.scrollY;
-                            e.forEach((e) => {
-                                if (e.hash) {
-                                    let i = document.querySelector(e.hash);
-                                    i.offsetTop <= s && i.offsetTop + i.offsetHeight > s
-                                        ? e.classList.add("active")
-                                        : e.classList.remove("active");
-                                }
-                            });
-                        };
-                    return (
-                        window.addEventListener("scroll", s),
-                        () => {
-                            window.removeEventListener("scroll", s);
-                        }
-                    );
+84560: function (e, s, i) {
+    "use strict";
+    var a = i(57437),
+        l = i(2265),
+        r = i(87138),
+        n = i(15326),
+        t = i.n(n),
+        c = i(84666),
+        d = i(66648);
+    s.default = () => {
+        let [e, s] = (0, l.useState)(!0),
+            [i, n] = (0, l.useState)(!1),
+            o = () => {
+                s(!e);
+            },
+            h = () => {
+                n(!i);
+            };
+        (0, l.useEffect)(() => {
+            let e = document.getElementById("navbar"),
+                s = () => {
+                    window.scrollY > 170 ? e.classList.add("is-sticky") : e.classList.remove("is-sticky");
                 };
-                return (0, a.jsxs)(a.Fragment, {
-                    children: [
-                        (0, a.jsx)("nav", {
-                            id: "navbar",
-                            className: "navbar navbar-expand-lg pufo-aside bg-0f1d22",
-                            children: (0, a.jsxs)("div", {
-                                className: "container",
+            return (
+                document.addEventListener("scroll", s),
+                window.scrollTo(0, 0),
+                m(),
+                () => {
+                    document.removeEventListener("scroll", s);
+                }
+            );
+        }, []);
+        let m = () => {
+            let e = document.querySelectorAll(".navbar-nav li a"),
+                s = () => {
+                    let s = window.scrollY;
+                    e.forEach((e) => {
+                        if (e.hash) {
+                            let i = document.querySelector(e.hash);
+                            i.offsetTop <= s && i.offsetTop + i.offsetHeight > s
+                                ? e.classList.add("active")
+                                : e.classList.remove("active");
+                        }
+                    });
+                };
+            return (
+                window.addEventListener("scroll", s),
+                () => {
+                    window.removeEventListener("scroll", s);
+                }
+            );
+        };
+        return (0, a.jsxs)(a.Fragment, {
+            children: [
+                (0, a.jsx)("nav", {
+                    id: "navbar",
+                    className: "navbar navbar-expand-lg pufo-aside bg-0f1d22",
+                    children: (0, a.jsxs)("div", {
+                        className: "container",
+                        children: [
+                            (0, a.jsx)(r.default, {
+                                href: "/home-3",
+                                className: "navbar-brand logo",
+                                children: (0, a.jsx)(d.default, {
+                                    src: "static/images/1.png",
+                                    alt: "logo",
+                                    width: 300,
+                                    height: 180,
+                                }),
+                            }),
+                            (0, a.jsxs)("button", {
+                                onClick: o,
+                                className: e
+                                    ? "navbar-toggler navbar-toggler-right collapsed"
+                                    : "navbar-toggler navbar-toggler-right",
+                                type: "button",
+                                "data-toggle": "collapse",
+                                "data-target": "#navbarSupportedContent",
+                                "aria-controls": "navbarSupportedContent",
+                                "aria-expanded": "false",
+                                "aria-label": "Toggle navigation",
                                 children: [
-                                    (0, a.jsx)(r.default, {
-                                        href: "/home-3",
-                                        className: "navbar-brand logo",
-                                        children: (0, a.jsx)(d.default, {
-                                            src: "static/images/1.png",
-                                            alt: "logo",
-                                            width: 250,
-                                            height: 150,
-                                        }),
-                                    }),
-                                    (0, a.jsxs)("button", {
-                                        onClick: o,
-                                        className: e
-                                            ? "navbar-toggler navbar-toggler-right collapsed"
-                                            : "navbar-toggler navbar-toggler-right",
-                                        type: "button",
-                                        "data-toggle": "collapse",
-                                        "data-target": "#navbarSupportedContent",
-                                        "aria-controls": "navbarSupportedContent",
-                                        "aria-expanded": "false",
-                                        "aria-label": "Toggle navigation",
+                                    (0, a.jsx)("span", { className: "icon-bar top-bar" }),
+                                    (0, a.jsx)("span", { className: "icon-bar middle-bar" }),
+                                    (0, a.jsx)("span", { className: "icon-bar bottom-bar" }),
+                                ],
+                            }),
+                            (0, a.jsxs)("div", {
+                                className: e ? "collapse navbar-collapse" : "navbar-collapse collapse show",
+                                id: "navbarSupportedContent",
+                                children: [
+                                    (0, a.jsxs)("ul", {
+                                        className: "navbar-nav",
                                         children: [
-                                            (0, a.jsx)("span", { className: "icon-bar top-bar" }),
-                                            (0, a.jsx)("span", { className: "icon-bar middle-bar" }),
-                                            (0, a.jsx)("span", { className: "icon-bar bottom-bar" }),
+                                            (0, a.jsx)("li", {
+                                                className: "nav-item",
+                                                children: (0, a.jsx)(t(), {
+                                                    onClick: o,
+                                                    offset: () => 100,
+                                                    className: "nav-link active",
+                                                    href: "#home",
+                                                    children: "Home",
+                                                }),
+                                            }),
+                                            (0, a.jsx)("li", {
+                                                className: "nav-item",
+                                                children: (0, a.jsx)(t(), {
+                                                    onClick: o,
+                                                    offset: () => -1,
+                                                    className: "nav-link",
+                                                    href: "#about",
+                                                    children: "About",
+                                                }),
+                                            }),
+                                            (0, a.jsx)("li", {
+                                                className: "nav-item",
+                                                children: (0, a.jsx)(t(), {
+                                                    onClick: o,
+                                                    offset: () => -1,
+                                                    className: "nav-link",
+                                                    href: "#portfolio",
+                                                    children: "Portfolio",
+                                                }),
+                                            }),
+                                            (0, a.jsx)("li", {
+                                                className: "nav-item",
+                                                children: (0, a.jsx)(t(), {
+                                                    onClick: o,
+                                                    offset: () => -1,
+                                                    className: "nav-link",
+                                                    href: "#skills",
+                                                    children: "Skills",
+                                                }),
+                                            }),
+                                            (0, a.jsx)("li", {
+                                                className: "nav-item",
+                                                children: (0, a.jsx)(t(), {
+                                                    onClick: o,
+                                                    offset: () => -1,
+                                                    className: "nav-link",
+                                                    href: "#contact",
+                                                    children: "Contact",
+                                                }),
+                                            }),
                                         ],
                                     }),
                                     (0, a.jsxs)("div", {
-                                        className: e ? "collapse navbar-collapse" : "navbar-collapse collapse show",
-                                        id: "navbarSupportedContent",
+                                        className: "aside-footer",
                                         children: [
-                                            (0, a.jsxs)("ul", {
-                                                className: "navbar-nav",
+                                            // Download Resume Button
+                                            (0, a.jsxs)(r.default, {
+                                                href: "static/images/Syed Bilal Resume.pdf",
+                                                target: "_blank",
+                                                download: true,
+                                                className: "common-btn three",
                                                 children: [
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => 100,
-                                                            className: "nav-link active",
-                                                            href: "#home",
-                                                            children: "Home",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#about",
-                                                            children: "About",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#portfolio",
-                                                            children: "Portfolio",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#blog",
-                                                            children: "Blog",
-                                                        }),
-                                                    }),
-                                                    (0, a.jsx)("li", {
-                                                        className: "nav-item",
-                                                        children: (0, a.jsx)(t(), {
-                                                            onClick: o,
-                                                            offset: () => -1,
-                                                            className: "nav-link",
-                                                            href: "#contact",
-                                                            children: "Contact",
-                                                        }),
-                                                    }),
+                                                    "Download Resume ",
+                                                    (0, a.jsx)("i", { className: "bx bxs-download" }),
                                                 ],
                                             }),
-                                            (0, a.jsxs)("div", {
-                                                className: "aside-footer",
+                                            // SOCIAL LINKS - CORRECTED
+                                            (0, a.jsxs)("ul", {
+                                                className: "social",
                                                 children: [
-                                                    (0, a.jsxs)(r.default, {
-                                                        href: "#",
-                                                        className: "common-btn three",
-                                                        children: [
-                                                            "Download CV ",
-                                                            (0, a.jsx)("i", { className: "bx bxs-download" }),
-                                                        ],
+                                                    // WhatsApp - Direct open (Mobile app, Desktop web)
+                                                    (0, a.jsx)("li", {
+                                                        children: (0, a.jsx)("a", {
+                                                            href: "#",
+                                                            onClick: (e) => {
+                                                                e.preventDefault();
+                                                                const phoneNumber = "923314070426";
+                                                                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                                                                if (isMobile) {
+                                                                    window.location.href = `whatsapp://send?phone=${phoneNumber}`;
+                                                                } else {
+                                                                    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+                                                                }
+                                                            },
+                                                            style: { cursor: "pointer" },
+                                                            target: "_blank",
+                                                            children: (0, a.jsx)("i", { className: "bx bxl-whatsapp" }),
+                                                        }),
                                                     }),
-                                                    (0, a.jsxs)("ul", {
-                                                        className: "social",
-                                                        children: [
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-facebook",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-twitter",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-linkedin",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                            (0, a.jsx)("li", {
-                                                                children: (0, a.jsx)("a", {
-                                                                    href: "#",
-                                                                    target: "_blank",
-                                                                    children: (0, a.jsx)("i", {
-                                                                        className: "bx bxl-behance",
-                                                                    }),
-                                                                }),
-                                                            }),
-                                                        ],
+                                                    // LinkedIn
+                                                    (0, a.jsx)("li", {
+                                                        children: (0, a.jsx)("a", {
+                                                            href: "https://www.linkedin.com/in/syed-bilal26/",
+                                                            target: "_blank",
+                                                            children: (0, a.jsx)("i", { className: "bx bxl-linkedin" }),
+                                                        }),
+                                                    }),
+                                                    // Website / Portfolio
+                                                    (0, a.jsx)("li", {
+                                                        children: (0, a.jsx)("a", {
+                                                            href: "https://syedbilalxhah.github.io/my-portfolio/",
+                                                            target: "_blank",
+                                                            children: (0, a.jsx)("i", { className: "bx bx-globe" }),
+                                                        }),
                                                     }),
                                                 ],
                                             }),
@@ -733,21 +734,23 @@
                                     }),
                                 ],
                             }),
-                        }),
-                        (0, a.jsx)("div", {
-                            className: "demo-side-icon",
-                            children: (0, a.jsx)("button", {
-                                type: "button",
-                                className: "modal-btn",
-                                onClick: h,
-                                children: (0, a.jsx)("span", { children: "Demos" }),
-                            }),
-                        }),
-                        (0, a.jsx)(c.Z, { onClick: h, active: i ? "show" : "" }),
-                    ],
-                });
-            };
-        },
+                        ],
+                    }),
+                }),
+                (0, a.jsx)("div", {
+                    className: "demo-side-icon",
+                    children: (0, a.jsx)("button", {
+                        type: "button",
+                        className: "modal-btn",
+                        onClick: h,
+                        children: (0, a.jsx)("span", { children: "Demos" }),
+                    }),
+                }),
+                (0, a.jsx)(c.Z, { onClick: h, active: i ? "show" : "" }),
+            ],
+        });
+    };
+},
         40539: function (e, s, i) {
             "use strict";
             var a = i(57437);
@@ -1023,6 +1026,7 @@
                 (s.default = () =>
                     (0, a.jsx)(a.Fragment, {
                         children: (0, a.jsx)("div", {
+                            id: "skills",
                             className: "skills-area border-bottom-two ptb-100",
                             children: (0, a.jsxs)("div", {
                                 className: "container",
