@@ -787,8 +787,8 @@
                 id: 1,
                 title: "Furniture Website",
                 category: "Logo",
-                image: "/images/projects/project1.jpg",
-                fullImage: "/images/work/work-details1.jpg",
+                image: "static/images/coffee.jpg",
+                fullImage: "static/images/banner.jpg",
                 img2: "/images/work/work-details2.jpg",
                 img3: "/images/work/work-details3.jpg",
                 client: "Furnish Furniture Co.",
@@ -1002,7 +1002,8 @@
                         height: "100%",
                         backgroundColor: "#ffffff",
                         zIndex: 10000,
-                        overflowY: "auto"
+                        overflowY: "auto",
+                        animation: "fadeInScale 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1)"
                     },
                     children: [
                         // Close button
@@ -1553,34 +1554,56 @@
                     ]
                 }),
                 
-                // ✅ STYLE TAG - CONTACT CONTAINER BHI ADD KAR DIYA
-(0, a.jsx)("style", {
-    dangerouslySetInnerHTML: {
-        __html: `
-            .work-details-area .container,
-            .contact-area .container {
-                max-width: 1400px !important;
-                width: 100% !important;
-                padding-right: 50px !important;
-                padding-left: 50px !important;
-                margin-right: auto !important;
-                margin-left: auto !important;
-            }
-            
-            .details-img img, .details-img .main-detail-image {
-                width: 100% !important;
-                height: auto !important;
-            }
-            
-            /* Contact form ko left shift karo */
-            .contact-area .col-lg-7 {
-                margin-left: -40px !important;  /* Thoda left shift */
-                /* Ya */
-                /* padding-left: 0 !important; */
-            }
-        `
-    }
-})
+                // ✅ STYLE TAG - ANIMATION + CONTAINER CSS
+                (0, a.jsx)("style", {
+                    dangerouslySetInnerHTML: {
+                        __html: `
+                            /* 3-Second Smooth Animation */
+                            @keyframes fadeInScale {
+                                0% {
+                                    opacity: 0;
+                                    transform: scale(0.96);
+                                }
+                                30% {
+                                    opacity: 0.3;
+                                }
+                                60% {
+                                    opacity: 0.7;
+                                    transform: scale(0.99);
+                                }
+                                100% {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+                            }
+                            
+                            .project-modal-overlay {
+                                animation: fadeInScale 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+                            }
+                            
+                            /* Container CSS */
+                            .work-details-area .container,
+                            .contact-area .container {
+                                max-width: 1400px !important;
+                                width: 100% !important;
+                                padding-right: 50px !important;
+                                padding-left: 50px !important;
+                                margin-right: auto !important;
+                                margin-left: auto !important;
+                            }
+                            
+                            .details-img img, .details-img .main-detail-image {
+                                width: 100% !important;
+                                height: auto !important;
+                            }
+                            
+                            /* Contact form left shift */
+                            .contact-area .col-lg-7 {
+                                margin-left: -40px !important;
+                            }
+                        `
+                    }
+                })
             ]
         });
     };
