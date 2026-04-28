@@ -751,166 +751,840 @@
         });
     };
 },
-        40539: function (e, s, i) {
-            "use strict";
-            var a = i(57437);
-            i(2265);
-            var l = i(87138),
-                r = i(66648);
-            s.default = () =>
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)("div", {
-                        id: "portfolio",
-                        className: "projects-area border-bottom-two ptb-100",
-                        children: (0, a.jsxs)("div", {
-                            className: "container",
+40539: function (e, s, i) {
+    "use strict";
+    var a = i(57437);
+    var l = i(2265);
+    var r = i(87138);
+    var n = i(66648);
+    
+    s.default = () => {
+        let [selectedProject, setSelectedProject] = (0, l.useState)(null);
+        let [isAnimating, setIsAnimating] = (0, l.useState)(false);
+        
+        let closeModal = () => {
+            if (isAnimating) return;
+            setIsAnimating(true);
+            setTimeout(() => {
+                setSelectedProject(null);
+                setIsAnimating(false);
+                document.body.style.overflow = "auto";
+            }, 300);
+        };
+        
+        let openProject = (project) => {
+            if (isAnimating) return;
+            setIsAnimating(true);
+            setSelectedProject(project);
+            document.body.style.overflow = "hidden";
+            setTimeout(() => {
+                setIsAnimating(false);
+            }, 400);
+        };
+        
+        let projects = [
+            {
+                id: 1,
+                title: "Furniture Website",
+                category: "Logo",
+                image: "/images/projects/project1.jpg",
+                fullImage: "/images/work/work-details1.jpg",
+                img2: "/images/work/work-details2.jpg",
+                img3: "/images/work/work-details3.jpg",
+                client: "Furnish Furniture Co.",
+                clientAddress: "152 san Francisco, USA",
+                dateStart: "15th, September 2020",
+                dateEnd: "6th, October 2020",
+                categories: ["Website Design", "Website Development"],
+                roles: ["User Interface & UX Design", "User Interface & UI Design"],
+                description1: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                description2: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."
+            },
+            {
+                id: 2,
+                title: "Travel App Logo Design",
+                category: "App",
+                image: "/images/projects/project2.jpg",
+                fullImage: "/images/work/work-details2.jpg",
+                img2: "/images/work/work-details1.jpg",
+                img3: "/images/work/work-details3.jpg",
+                client: "Travel App Co.",
+                clientAddress: "New York, USA",
+                dateStart: "10th, January 2021",
+                dateEnd: "5th, March 2021",
+                categories: ["App Design", "Logo Design"],
+                roles: ["UI/UX Design", "Brand Identity"],
+                description1: "A unique logo design for a travel booking application.",
+                description2: "Complete branding and design system for modern travel app."
+            },
+            {
+                id: 3,
+                title: "ERP Design",
+                category: "Design",
+                image: "/images/projects/project3.jpg",
+                fullImage: "/images/work/work-details3.jpg",
+                img2: "/images/work/work-details1.jpg",
+                img3: "/images/work/work-details2.jpg",
+                client: "ERP Solutions",
+                clientAddress: "London, UK",
+                dateStart: "1st, June 2022",
+                dateEnd: "30th, September 2022",
+                categories: ["ERP Software", "Dashboard Design"],
+                roles: ["Product Design", "UX Research"],
+                description1: "Enterprise resource planning software with clean interface.",
+                description2: "Scalable design system for complex enterprise applications."
+            },
+            {
+                id: 4,
+                title: "Restaurant Design",
+                category: "Restaurant",
+                image: "/images/projects/project4.jpg",
+                fullImage: "/images/work/work-details1.jpg",
+                img2: "/images/work/work-details2.jpg",
+                img3: "/images/work/work-details3.jpg",
+                client: "Gourmet Restaurant",
+                clientAddress: "Paris, France",
+                dateStart: "15th, February 2023",
+                dateEnd: "20th, April 2023",
+                categories: ["Branding", "Web Design"],
+                roles: ["Visual Design", "Frontend Development"],
+                description1: "Complete branding and website design for a modern restaurant.",
+                description2: "Interactive menu and reservation system with stunning visuals."
+            }
+        ];
+        
+        return (0, a.jsxs)(a.Fragment, {
+            children: [
+                // Projects Grid Section
+                (0, a.jsx)("div", {
+                    id: "portfolio",
+                    className: "projects-area border-bottom-two ptb-100",
+                    children: (0, a.jsxs)("div", {
+                        className: "container",
+                        children: [
+                            (0, a.jsxs)("div", {
+                                className: "section-title three",
+                                children: [
+                                    (0, a.jsx)("span", { className: "sub-title", children: "PROJECTS" }),
+                                    (0, a.jsx)("h2", {
+                                        children: "Here Are Some Projects Which Gain A Great Success",
+                                    }),
+                                ],
+                            }),
+                            (0, a.jsxs)("div", {
+                                className: "row",
+                                children: [
+                                    (0, a.jsxs)("div", {
+                                        className: "col-sm-6 col-lg-7",
+                                        children: [
+                                            (0, a.jsxs)("div", {
+                                                className: "projects-item",
+                                                style: { cursor: "pointer" },
+                                                onClick: () => openProject(projects[0]),
+                                                children: [
+                                                    (0, a.jsx)(n.default, {
+                                                        src: projects[0].image,
+                                                        alt: projects[0].title,
+                                                        width: 518,
+                                                        height: 357,
+                                                    }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "inner",
+                                                        children: (0, a.jsxs)("div", {
+                                                            className: "inner",
+                                                            children: [
+                                                                (0, a.jsx)("h3", { children: projects[0].title }),
+                                                                (0, a.jsx)("span", { children: projects[0].category }),
+                                                            ],
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                                className: "projects-item",
+                                                style: { cursor: "pointer" },
+                                                onClick: () => openProject(projects[1]),
+                                                children: [
+                                                    (0, a.jsx)(n.default, {
+                                                        src: projects[1].image,
+                                                        alt: projects[1].title,
+                                                        width: 518,
+                                                        height: 452,
+                                                    }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "inner",
+                                                        children: (0, a.jsxs)("div", {
+                                                            className: "inner",
+                                                            children: [
+                                                                (0, a.jsx)("h3", { children: projects[1].title }),
+                                                                (0, a.jsx)("span", { children: projects[1].category }),
+                                                            ],
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                    (0, a.jsxs)("div", {
+                                        className: "col-sm-6 col-lg-5",
+                                        children: [
+                                            (0, a.jsxs)("div", {
+                                                className: "projects-item two",
+                                                style: { cursor: "pointer" },
+                                                onClick: () => openProject(projects[2]),
+                                                children: [
+                                                    (0, a.jsx)(n.default, {
+                                                        src: projects[2].image,
+                                                        alt: projects[2].title,
+                                                        width: 344,
+                                                        height: 457,
+                                                    }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "inner",
+                                                        children: (0, a.jsxs)("div", {
+                                                            className: "inner",
+                                                            children: [
+                                                                (0, a.jsx)("h3", { children: projects[2].title }),
+                                                                (0, a.jsx)("span", { children: projects[2].category }),
+                                                            ],
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                            (0, a.jsxs)("div", {
+                                                className: "projects-item two",
+                                                style: { cursor: "pointer" },
+                                                onClick: () => openProject(projects[3]),
+                                                children: [
+                                                    (0, a.jsx)(n.default, {
+                                                        src: projects[3].image,
+                                                        alt: projects[3].title,
+                                                        width: 344,
+                                                        height: 352,
+                                                    }),
+                                                    (0, a.jsx)("div", {
+                                                        className: "inner",
+                                                        children: (0, a.jsxs)("div", {
+                                                            className: "inner",
+                                                            children: [
+                                                                (0, a.jsx)("h3", { children: projects[3].title }),
+                                                                (0, a.jsx)("span", { children: projects[3].category }),
+                                                            ],
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                            (0, a.jsx)("div", {
+                                className: "text-center",
+                                children: (0, a.jsx)(r.default, {
+                                    href: "/works",
+                                    className: "common-btn three",
+                                    target: "_blank",
+                                    children: "Explore Projects",
+                                }),
+                            }),
+                        ],
+                    }),
+                }),
+                
+                // Modal
+                selectedProject && (0, a.jsxs)("div", {
+                    className: "project-modal-overlay",
+                    style: {
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: "#ffffff",
+                        zIndex: 10000,
+                        overflowY: "auto"
+                    },
+                    children: [
+                        // Close button
+                        (0, a.jsx)("button", {
+                            onClick: closeModal,
+                            style: {
+                                position: "fixed",
+                                top: "20px",
+                                right: "30px",
+                                width: "40px",
+                                height: "40px",
+                                backgroundColor: "#000",
+                                color: "#fff",
+                                fontSize: "24px",
+                                fontWeight: "bold",
+                                borderRadius: "50%",
+                                border: "none",
+                                cursor: "pointer",
+                                zIndex: 10001,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                transition: "all 0.3s ease"
+                            },
+                            onMouseEnter: (e) => {
+                                e.target.style.backgroundColor = "#333";
+                                e.target.style.transform = "scale(1.1)";
+                            },
+                            onMouseLeave: (e) => {
+                                e.target.style.backgroundColor = "#000";
+                                e.target.style.transform = "scale(1)";
+                            },
+                            children: "×"
+                        }),
+                        
+                        // Top Header
+                        (0, a.jsxs)("div", {
+                            className: "top-header",
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: "section-title three",
+                                    className: "container",
                                     children: [
-                                        (0, a.jsx)("span", { className: "sub-title", children: "PROJECTS" }),
-                                        (0, a.jsx)("h2", {
-                                            children: "Here Are Some Projects Which Gain A Great Success",
-                                        }),
-                                    ],
+                                        (0, a.jsxs)("div", {
+                                            className: "row align-items-center",
+                                            children: [
+                                                (0, a.jsxs)("div", {
+                                                    className: "col-6",
+                                                    children: [
+                                                        (0, a.jsx)("div", {
+                                                            className: "logo",
+                                                            children: (0, a.jsx)(n.default, {
+                                                                src: "/images/logo.png",
+                                                                alt: "Logo",
+                                                                width: 120,
+                                                                height: 36
+                                                            })
+                                                        })
+                                                    ]
+                                                }),
+                                                (0, a.jsxs)("div", {
+                                                    className: "col-6",
+                                                    children: [
+                                                        (0, a.jsxs)("ul", {
+                                                            children: [
+                                                                (0, a.jsx)("li", {
+                                                                    children: (0, a.jsx)("a", {
+                                                                        href: "#works",
+                                                                        children: "Works"
+                                                                    })
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        
+                        // Page Title Area
+                        (0, a.jsxs)("div", {
+                            className: "page-title-area",
+                            children: [
+                                (0, a.jsxs)("div", {
+                                    className: "d-table",
+                                    children: [
+                                        (0, a.jsxs)("div", {
+                                            className: "d-table-cell",
+                                            children: [
+                                                (0, a.jsxs)("div", {
+                                                    className: "container",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "title-content",
+                                                            children: [
+                                                                (0, a.jsx)("span", { children: selectedProject.category }),
+                                                                (0, a.jsx)("h1", { children: selectedProject.title }),
+                                                                (0, a.jsxs)("ul", {
+                                                                    children: [
+                                                                        (0, a.jsx)("li", { children: (0, a.jsx)("a", { href: "/", children: "Home" }) }),
+                                                                        (0, a.jsx)("li", { children: selectedProject.title })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        })
+                                    ]
                                 }),
                                 (0, a.jsxs)("div", {
-                                    className: "row",
+                                    className: "lines",
                                     children: [
-                                        (0, a.jsxs)("div", {
-                                            className: "col-sm-6 col-lg-7",
-                                            children: [
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project1.jpg",
-                                                            alt: "Projects",
-                                                            width: 518,
-                                                            height: 357,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Furniture Website",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Logo" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project2.jpg",
-                                                            alt: "Projects",
-                                                            width: 518,
-                                                            height: 452,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Travel App Logo Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "App" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                        (0, a.jsxs)("div", {
-                                            className: "col-sm-6 col-lg-5",
-                                            children: [
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item two",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project3.jpg",
-                                                            alt: "Projects",
-                                                            width: 344,
-                                                            height: 457,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "ERP Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Design" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                                (0, a.jsxs)("div", {
-                                                    className: "projects-item two",
-                                                    children: [
-                                                        (0, a.jsx)(r.default, {
-                                                            src: "/images/projects/project4.jpg",
-                                                            alt: "Projects",
-                                                            width: 344,
-                                                            height: 352,
-                                                        }),
-                                                        (0, a.jsx)("div", {
-                                                            className: "inner",
-                                                            children: (0, a.jsxs)("div", {
-                                                                className: "inner",
-                                                                children: [
-                                                                    (0, a.jsx)("h3", {
-                                                                        children: (0, a.jsx)(l.default, {
-                                                                            href: "/works/details",
-                                                                            target: "_blank",
-                                                                            children: "Restaurant Design",
-                                                                        }),
-                                                                    }),
-                                                                    (0, a.jsx)("span", { children: "Restaurant" }),
-                                                                ],
-                                                            }),
-                                                        }),
-                                                    ],
-                                                }),
-                                            ],
-                                        }),
-                                    ],
-                                }),
-                                (0, a.jsx)("div", {
-                                    className: "text-center",
-                                    children: (0, a.jsx)(l.default, {
-                                        href: "/works",
-                                        className: "common-btn three",
-                                        target: "_blank",
-                                        children: "Explore Projects",
-                                    }),
-                                }),
-                            ],
+                                        (0, a.jsx)("div", { className: "line" }),
+                                        (0, a.jsx)("div", { className: "line" }),
+                                        (0, a.jsx)("div", { className: "line" }),
+                                        (0, a.jsx)("div", { className: "line" }),
+                                        (0, a.jsx)("div", { className: "line" })
+                                    ]
+                                })
+                            ]
                         }),
-                    }),
-                });
-        },
+                        
+                        // Work Details Area
+                        (0, a.jsxs)("div", {
+                            id: "works",
+                            className: "work-details-area pt-100",
+                            children: [
+                                (0, a.jsxs)("div", {
+                                    className: "container",
+                                    children: [
+                                        // Main Image
+                                        (0, a.jsxs)("div", {
+                                            className: "details-img",
+                                            children: [
+                                                (0, a.jsx)(n.default, {
+                                                    src: selectedProject.fullImage,
+                                                    alt: selectedProject.title,
+                                                    width: 1140,
+                                                    height: 730,
+                                                    style: { width: "100%" }
+                                                }),
+                                                // Info Boxes
+                                                (0, a.jsxs)("div", {
+                                                    className: "row",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-3",
+                                                            children: [
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "details-img-inner",
+                                                                    children: [
+                                                                        (0, a.jsx)("h3", { children: "Client" }),
+                                                                        (0, a.jsxs)("ul", {
+                                                                            children: [
+                                                                                (0, a.jsx)("li", { children: selectedProject.client }),
+                                                                                (0, a.jsx)("li", { children: selectedProject.clientAddress })
+                                                                            ]
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-3",
+                                                            children: [
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "details-img-inner",
+                                                                    children: [
+                                                                        (0, a.jsx)("h3", { children: "Date" }),
+                                                                        (0, a.jsxs)("ul", {
+                                                                            children: [
+                                                                                (0, a.jsx)("li", { children: selectedProject.dateStart }),
+                                                                                (0, a.jsx)("li", { children: selectedProject.dateEnd })
+                                                                            ]
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-3",
+                                                            children: [
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "details-img-inner",
+                                                                    children: [
+                                                                        (0, a.jsx)("h3", { children: "Categories" }),
+                                                                        (0, a.jsx)("ul", {
+                                                                            children: selectedProject.categories.map((cat, idx) => (0, a.jsx)("li", { children: cat }, idx))
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-3",
+                                                            children: [
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "details-img-inner",
+                                                                    children: [
+                                                                        (0, a.jsx)("h3", { children: "Working Role" }),
+                                                                        (0, a.jsx)("ul", {
+                                                                            children: selectedProject.roles.map((role, idx) => (0, a.jsx)("li", { children: role }, idx))
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        
+                                        // Description with Images
+                                        (0, a.jsxs)("div", {
+                                            className: "details-description",
+                                            children: [
+                                                (0, a.jsx)("h3", { children: "Description" }),
+                                                (0, a.jsx)("p", { children: selectedProject.description1 }),
+                                                (0, a.jsxs)("div", {
+                                                    className: "row",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-6",
+                                                            children: [
+                                                                (0, a.jsx)("div", {
+                                                                    className: "img",
+                                                                    children: (0, a.jsx)(n.default, {
+                                                                        src: selectedProject.img2,
+                                                                        alt: "Details",
+                                                                        width: 555,
+                                                                        height: 390,
+                                                                        style: { width: "100%" }
+                                                                    })
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-6 col-lg-6",
+                                                            children: [
+                                                                (0, a.jsx)("div", {
+                                                                    className: "img",
+                                                                    children: (0, a.jsx)(n.default, {
+                                                                        src: selectedProject.img3,
+                                                                        alt: "Details",
+                                                                        width: 555,
+                                                                        height: 390,
+                                                                        style: { width: "100%" }
+                                                                    })
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                }),
+                                                (0, a.jsx)("p", { children: selectedProject.description2 })
+                                            ]
+                                        }),
+                                        
+                                        // Navigation Pages
+                                        (0, a.jsxs)("div", {
+                                            className: "details-pages",
+                                            children: [
+                                                (0, a.jsxs)("div", {
+                                                    className: "row align-items-center",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-4 col-lg-4",
+                                                            children: [
+                                                                (0, a.jsx)("div", {
+                                                                    className: "pages-item",
+                                                                    children: (0, a.jsxs)("a", {
+                                                                        className: "pre-project",
+                                                                        href: "#",
+                                                                        children: [
+                                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" }),
+                                                                            " Previous Project"
+                                                                        ]
+                                                                    })
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-4 col-lg-4",
+                                                            children: [
+                                                                (0, a.jsx)("div", {
+                                                                    className: "pages-item two",
+                                                                    children: (0, a.jsx)("a", {
+                                                                        className: "common-btn",
+                                                                        href: "/works",
+                                                                        children: "Go Back To Work"
+                                                                    })
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "col-sm-4 col-lg-4",
+                                                            children: [
+                                                                (0, a.jsx)("div", {
+                                                                    className: "pages-item three",
+                                                                    children: (0, a.jsxs)("a", {
+                                                                        className: "next-project",
+                                                                        href: "#",
+                                                                        children: [
+                                                                            "Next Project ",
+                                                                            (0, a.jsx)("i", { className: "flaticon-right-arrow" })
+                                                                        ]
+                                                                    })
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        
+                                        // Contact Area
+                                        (0, a.jsxs)("div", {
+                                            className: "contact-area pb-70",
+                                            children: [
+                                                (0, a.jsxs)("div", {
+                                                    className: "container",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "section-title",
+                                                            children: [
+                                                                (0, a.jsx)("h2", {
+                                                                    children: [
+                                                                        "Have Any Project? Just ",
+                                                                        (0, a.jsx)("span", { children: "Drop A Line" }),
+                                                                        ". I Always Love To Hear From You"
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, a.jsxs)("div", {
+                                                            className: "row align-items-center",
+                                                            children: [
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "col-lg-7",
+                                                                    children: [
+                                                                        (0, a.jsxs)("form", {
+                                                                            id: "contactForm",
+                                                                            children: [
+                                                                                (0, a.jsxs)("div", {
+                                                                                    className: "row",
+                                                                                    children: [
+                                                                                        (0, a.jsxs)("div", {
+                                                                                            className: "col-lg-6",
+                                                                                            children: [
+                                                                                                (0, a.jsx)("div", {
+                                                                                                    className: "form-group",
+                                                                                                    children: (0, a.jsx)("input", {
+                                                                                                        type: "text",
+                                                                                                        className: "form-control",
+                                                                                                        placeholder: "Name",
+                                                                                                        name: "name"
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        }),
+                                                                                        (0, a.jsxs)("div", {
+                                                                                            className: "col-lg-6",
+                                                                                            children: [
+                                                                                                (0, a.jsx)("div", {
+                                                                                                    className: "form-group",
+                                                                                                    children: (0, a.jsx)("input", {
+                                                                                                        type: "text",
+                                                                                                        className: "form-control",
+                                                                                                        placeholder: "Email",
+                                                                                                        name: "email"
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        }),
+                                                                                        (0, a.jsxs)("div", {
+                                                                                            className: "col-lg-6",
+                                                                                            children: [
+                                                                                                (0, a.jsx)("div", {
+                                                                                                    className: "form-group",
+                                                                                                    children: (0, a.jsx)("input", {
+                                                                                                        type: "text",
+                                                                                                        className: "form-control",
+                                                                                                        placeholder: "Subject",
+                                                                                                        name: "subject"
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        }),
+                                                                                        (0, a.jsxs)("div", {
+                                                                                            className: "col-lg-6",
+                                                                                            children: [
+                                                                                                (0, a.jsx)("div", {
+                                                                                                    className: "form-group",
+                                                                                                    children: (0, a.jsx)("input", {
+                                                                                                        type: "text",
+                                                                                                        className: "form-control",
+                                                                                                        placeholder: "Phone",
+                                                                                                        name: "number"
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        }),
+                                                                                        (0, a.jsxs)("div", {
+                                                                                            className: "col-lg-12",
+                                                                                            children: [
+                                                                                                (0, a.jsx)("div", {
+                                                                                                    className: "form-group",
+                                                                                                    children: (0, a.jsx)("textarea", {
+                                                                                                        name: "text",
+                                                                                                        className: "form-control",
+                                                                                                        cols: "30",
+                                                                                                        rows: "6",
+                                                                                                        placeholder: "Write message"
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        })
+                                                                                    ]
+                                                                                }),
+                                                                                (0, a.jsxs)("button", {
+                                                                                    type: "submit",
+                                                                                    className: "btn common-btn",
+                                                                                    children: ["Send Message ", (0, a.jsx)("span", {})]
+                                                                                })
+                                                                            ]
+                                                                        })
+                                                                    ]
+                                                                }),
+                                                                (0, a.jsxs)("div", {
+                                                                    className: "col-lg-5",
+                                                                    children: [
+                                                                        (0, a.jsxs)("div", {
+                                                                            className: "contact-content",
+                                                                            children: [
+                                                                                (0, a.jsxs)("div", {
+                                                                                    className: "top",
+                                                                                    children: [
+                                                                                        (0, a.jsxs)("ul", {
+                                                                                            children: [
+                                                                                                (0, a.jsxs)("li", {
+                                                                                                    children: [
+                                                                                                        (0, a.jsx)("span", { children: "Phone:" }),
+                                                                                                        (0, a.jsx)("a", { href: "tel:+923314070426", children: "+92 331 4070426" })
+                                                                                                    ]
+                                                                                                }),
+                                                                                                (0, a.jsxs)("li", {
+                                                                                                    children: [
+                                                                                                        (0, a.jsx)("span", { children: "Email:" }),
+                                                                                                        (0, a.jsx)("a", { href: "mailto:syedbilal10ua@gmail.com", children: "syedbilal10ua@gmail.com" })
+                                                                                                    ]
+                                                                                                }),
+                                                                                                (0, a.jsxs)("li", {
+                                                                                                    children: [
+                                                                                                        (0, a.jsx)("span", { children: "Website:" }),
+                                                                                                        (0, a.jsx)("a", { href: "#", target: "_blank", children: "www.reton.com" })
+                                                                                                    ]
+                                                                                                }),
+                                                                                                (0, a.jsxs)("li", {
+                                                                                                    children: [
+                                                                                                        (0, a.jsx)("span", { children: "Address:" }),
+                                                                                                        (0, a.jsx)("a", { href: "#", children: "12/7, Mc Street, Canada" })
+                                                                                                    ]
+                                                                                                })
+                                                                                            ]
+                                                                                        })
+                                                                                    ]
+                                                                                }),
+                                                                                (0, a.jsxs)("div", {
+                                                                                    className: "bottom",
+                                                                                    children: [
+                                                                                        (0, a.jsxs)("ul", {
+                                                                                            children: [
+                                                                                                (0, a.jsx)("li", {
+                                                                                                    children: (0, a.jsx)("a", {
+                                                                                                        href: "https://facebook.com/",
+                                                                                                        target: "_blank",
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-facebook" })
+                                                                                                    })
+                                                                                                }),
+                                                                                                (0, a.jsx)("li", {
+                                                                                                    children: (0, a.jsx)("a", {
+                                                                                                        href: "https://twitter.com/",
+                                                                                                        target: "_blank",
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-twitter" })
+                                                                                                    })
+                                                                                                }),
+                                                                                                (0, a.jsx)("li", {
+                                                                                                    children: (0, a.jsx)("a", {
+                                                                                                        href: "https://linkedin.com/",
+                                                                                                        target: "_blank",
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-linkedin" })
+                                                                                                    })
+                                                                                                }),
+                                                                                                (0, a.jsx)("li", {
+                                                                                                    children: (0, a.jsx)("a", {
+                                                                                                        href: "https://behance.com/",
+                                                                                                        target: "_blank",
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-behance" })
+                                                                                                    })
+                                                                                                }),
+                                                                                                (0, a.jsx)("li", {
+                                                                                                    children: (0, a.jsx)("a", {
+                                                                                                        href: "https://dribbble.com/",
+                                                                                                        target: "_blank",
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-dribbble" })
+                                                                                                    })
+                                                                                                })
+                                                                                            ]
+                                                                                        })
+                                                                                    ]
+                                                                                })
+                                                                            ]
+                                                                        })
+                                                                    ]
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        
+                                        // Copyright Area
+                                        (0, a.jsxs)("div", {
+                                            className: "copyright-area seven",
+                                            children: [
+                                                (0, a.jsxs)("div", {
+                                                    className: "container",
+                                                    children: [
+                                                        (0, a.jsxs)("div", {
+                                                            className: "copyright-item",
+                                                            children: [
+                                                                "Copyright @ 2024 Design & Developed by ",
+                                                                (0, a.jsx)("a", { href: "https://hibootstrap.com/", target: "_blank", children: "HiBootstrap" })
+                                                            ]
+                                                        })
+                                                    ]
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                
+                // ✅ STYLE TAG - CONTACT CONTAINER BHI ADD KAR DIYA
+(0, a.jsx)("style", {
+    dangerouslySetInnerHTML: {
+        __html: `
+            .work-details-area .container,
+            .contact-area .container {
+                max-width: 1400px !important;
+                width: 100% !important;
+                padding-right: 50px !important;
+                padding-left: 50px !important;
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+            
+            .details-img img, .details-img .main-detail-image {
+                width: 100% !important;
+                height: auto !important;
+            }
+            
+            /* Contact form ko left shift karo */
+            .contact-area .col-lg-7 {
+                margin-left: -40px !important;  /* Thoda left shift */
+                /* Ya */
+                /* padding-left: 0 !important; */
+            }
+        `
+    }
+})
+            ]
+        });
+    };
+},
        72744: function (e, s, i) {
             "use strict";
             var a = i(57437);
