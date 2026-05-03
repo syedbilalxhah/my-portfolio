@@ -761,12 +761,14 @@
     s.default = () => {
         let [selectedProject, setSelectedProject] = (0, l.useState)(null);
         let [isAnimating, setIsAnimating] = (0, l.useState)(false);
+        let [currentImageIndex, setCurrentImageIndex] = (0, l.useState)(0);
         
         let closeModal = () => {
             if (isAnimating) return;
             setIsAnimating(true);
             setTimeout(() => {
                 setSelectedProject(null);
+                setCurrentImageIndex(0);
                 setIsAnimating(false);
                 document.body.style.overflow = "auto";
             }, 300);
@@ -776,10 +778,25 @@
             if (isAnimating) return;
             setIsAnimating(true);
             setSelectedProject(project);
+            setCurrentImageIndex(0);
             document.body.style.overflow = "hidden";
             setTimeout(() => {
                 setIsAnimating(false);
             }, 400);
+        };
+        
+        // Next image function
+        let nextImage = () => {
+            if (selectedProject && selectedProject.images) {
+                setCurrentImageIndex((prev) => (prev + 1) % selectedProject.images.length);
+            }
+        };
+        
+        // Previous image function
+        let prevImage = () => {
+            if (selectedProject && selectedProject.images) {
+                setCurrentImageIndex((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length);
+            }
         };
         
         let projects = [
@@ -788,7 +805,12 @@
                 title: "Furniture Website",
                 category: "Logo",
                 image: "static/images/coffee.jpg",
-                fullImage: "static/images/banner.jpg",
+                fullImage: "static/images/coffee.jpg",
+                images: [
+                    "static/images/banner.jpg",
+                    "static/images/coffee.jpg",
+                    "/images/work/work-details3.jpg"
+                ],
                 img2: "/images/work/work-details2.jpg",
                 img3: "/images/work/work-details3.jpg",
                 client: "Furnish Furniture Co.",
@@ -806,6 +828,11 @@
                 category: "App",
                 image: "/images/projects/project2.jpg",
                 fullImage: "/images/work/work-details2.jpg",
+                images: [
+                    "/images/work/work-details2.jpg",
+                    "/images/work/work-details1.jpg",
+                    "/images/work/work-details3.jpg"
+                ],
                 img2: "/images/work/work-details1.jpg",
                 img3: "/images/work/work-details3.jpg",
                 client: "Travel App Co.",
@@ -823,6 +850,11 @@
                 category: "Design",
                 image: "/images/projects/project3.jpg",
                 fullImage: "/images/work/work-details3.jpg",
+                images: [
+                    "/images/work/work-details3.jpg",
+                    "/images/work/work-details1.jpg",
+                    "/images/work/work-details2.jpg"
+                ],
                 img2: "/images/work/work-details1.jpg",
                 img3: "/images/work/work-details2.jpg",
                 client: "ERP Solutions",
@@ -840,6 +872,11 @@
                 category: "Restaurant",
                 image: "/images/projects/project4.jpg",
                 fullImage: "/images/work/work-details1.jpg",
+                images: [
+                    "/images/work/work-details1.jpg",
+                    "/images/work/work-details2.jpg",
+                    "/images/work/work-details3.jpg"
+                ],
                 img2: "/images/work/work-details2.jpg",
                 img3: "/images/work/work-details3.jpg",
                 client: "Gourmet Restaurant",
@@ -991,7 +1028,7 @@
                     }),
                 }),
                 
-                // Modal
+                // Modal with Slider
                 selectedProject && (0, a.jsxs)("div", {
                     className: "project-modal-overlay",
                     style: {
@@ -1003,7 +1040,7 @@
                         backgroundColor: "#ffffff",
                         zIndex: 10000,
                         overflowY: "auto",
-                        animation: "fadeInScale 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1)"
+                        animation: "fadeInScale 0.5s ease-out"
                     },
                     children: [
                         // Close button
@@ -1011,32 +1048,39 @@
                             onClick: closeModal,
                             style: {
                                 position: "fixed",
-                                top: "20px",
-                                right: "30px",
-                                width: "40px",
-                                height: "40px",
-                                backgroundColor: "#000",
-                                color: "#fff",
-                                fontSize: "24px",
-                                fontWeight: "bold",
-                                borderRadius: "50%",
-                                border: "none",
+                                top: "9px",
+                                right: "20px",
+                                backgroundColor: "#ffffff",
+                                color: "#000000",
+                                fontSize: "14px",
+                                fontWeight: "500",
+                                padding: "5px 16px",
+                                borderRadius: "40px",
+                                border: "1px solid #ddd",
                                 cursor: "pointer",
                                 zIndex: 10001,
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: "center",
-                                transition: "all 0.3s ease"
+                                gap: "6px",
+                                transition: "all 0.3s ease",
+                                fontFamily: "inherit",
+                                boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
                             },
                             onMouseEnter: (e) => {
-                                e.target.style.backgroundColor = "#333";
-                                e.target.style.transform = "scale(1.1)";
+                                e.target.style.backgroundColor = "#f5f5f5";
+                                e.target.style.transform = "translateX(-3px)";
                             },
                             onMouseLeave: (e) => {
-                                e.target.style.backgroundColor = "#000";
-                                e.target.style.transform = "scale(1)";
+                                e.target.style.backgroundColor = "#ffffff";
+                                e.target.style.transform = "translateX(0)";
                             },
-                            children: "×"
+                            children: [
+                                (0, a.jsx)("span", {
+                                    style: { fontSize: "18px", display: "inline-block" },
+                                    children: "←"
+                                }),
+                                " Back"
+                            ]
                         }),
                         
                         // Top Header
@@ -1130,7 +1174,7 @@
                             ]
                         }),
                         
-                        // Work Details Area
+                        // Work Details Area with Slider
                         (0, a.jsxs)("div", {
                             id: "works",
                             className: "work-details-area pt-100",
@@ -1138,78 +1182,281 @@
                                 (0, a.jsxs)("div", {
                                     className: "container",
                                     children: [
-                                        // Main Image
+                                        // Image Slider
                                         (0, a.jsxs)("div", {
                                             className: "details-img",
                                             children: [
-                                                (0, a.jsx)(n.default, {
-                                                    src: selectedProject.fullImage,
-                                                    alt: selectedProject.title,
-                                                    width: 1140,
-                                                    height: 730,
-                                                    style: { width: "100%" }
+                                                (0, a.jsxs)("div", {
+                                                    style: { position: "relative", marginBottom: "30px" },
+                                                    children: [
+                                                        // Main Image
+                                                        (0, a.jsx)(n.default, {
+                                                            src: selectedProject.images?.[currentImageIndex] || selectedProject.fullImage,
+                                                            alt: selectedProject.title,
+                                                            width: 1140,
+                                                            height: 500,
+                                                            style: { width: "100%", borderRadius: "10px", objectFit: "cover" }
+                                                        }),
+                                                        // Slider Controls (only if multiple images)
+                                                        selectedProject.images && selectedProject.images.length > 1 && (0, a.jsxs)(a.Fragment, {
+                                                            children: [
+                                                                // Previous Button
+                                                                (0, a.jsx)("button", {
+                                                                    onClick: prevImage,
+                                                                    style: {
+                                                                        position: "absolute",
+                                                                        left: "15px",
+                                                                        top: "50%",
+                                                                        transform: "translateY(-50%)",
+                                                                        backgroundColor: "rgba(0,0,0,0.6)",
+                                                                        color: "#fff",
+                                                                        border: "none",
+                                                                        borderRadius: "50%",
+                                                                        width: "40px",
+                                                                        height: "40px",
+                                                                        cursor: "pointer",
+                                                                        fontSize: "20px",
+                                                                        display: "flex",
+                                                                        alignItems: "center",
+                                                                        justifyContent: "center",
+                                                                        transition: "all 0.3s ease",
+                                                                        zIndex: 10
+                                                                    },
+                                                                    onMouseEnter: (e) => {
+                                                                        e.target.style.backgroundColor = "rgba(0,0,0,0.8)";
+                                                                        e.target.style.transform = "translateY(-50%) scale(1.05)";
+                                                                    },
+                                                                    onMouseLeave: (e) => {
+                                                                        e.target.style.backgroundColor = "rgba(0,0,0,0.6)";
+                                                                        e.target.style.transform = "translateY(-50%) scale(1)";
+                                                                    },
+                                                                    children: "←"
+                                                                }),
+                                                                // Next Button
+                                                                (0, a.jsx)("button", {
+                                                                    onClick: nextImage,
+                                                                    style: {
+                                                                        position: "absolute",
+                                                                        right: "15px",
+                                                                        top: "50%",
+                                                                        transform: "translateY(-50%)",
+                                                                        backgroundColor: "rgba(0,0,0,0.6)",
+                                                                        color: "#fff",
+                                                                        border: "none",
+                                                                        borderRadius: "50%",
+                                                                        width: "40px",
+                                                                        height: "40px",
+                                                                        cursor: "pointer",
+                                                                        fontSize: "20px",
+                                                                        display: "flex",
+                                                                        alignItems: "center",
+                                                                        justifyContent: "center",
+                                                                        transition: "all 0.3s ease",
+                                                                        zIndex: 10
+                                                                    },
+                                                                    onMouseEnter: (e) => {
+                                                                        e.target.style.backgroundColor = "rgba(0,0,0,0.8)";
+                                                                        e.target.style.transform = "translateY(-50%) scale(1.05)";
+                                                                    },
+                                                                    onMouseLeave: (e) => {
+                                                                        e.target.style.backgroundColor = "rgba(0,0,0,0.6)";
+                                                                        e.target.style.transform = "translateY(-50%) scale(1)";
+                                                                    },
+                                                                    children: "→"
+                                                                }),
+                                                                // Image Counter
+                                                                (0, a.jsx)("div", {
+                                                                    style: {
+                                                                        position: "absolute",
+                                                                        bottom: "15px",
+                                                                        right: "15px",
+                                                                        backgroundColor: "rgba(0,0,0,0.6)",
+                                                                        color: "#fff",
+                                                                        padding: "5px 10px",
+                                                                        borderRadius: "20px",
+                                                                        fontSize: "12px",
+                                                                        fontFamily: "monospace"
+                                                                    },
+                                                                    children: `${currentImageIndex + 1} / ${selectedProject.images.length}`
+                                                                })
+                                                            ]
+                                                        })
+                                                    ]
                                                 }),
-                                                // Info Boxes
+                                                // Info Boxes - Items in Horizontal Line (Flex Row)
                                                 (0, a.jsxs)("div", {
                                                     className: "row",
+                                                    style: { gap: "30px", marginTop: "40px", marginBottom: "40px" },
                                                     children: [
+                                                        // Categories - 6 columns
                                                         (0, a.jsxs)("div", {
-                                                            className: "col-sm-6 col-lg-3",
+                                                            className: "col-sm-6 col-lg-6",
+                                                            style: { flex: "1" },
                                                             children: [
                                                                 (0, a.jsxs)("div", {
-                                                                    className: "details-img-inner",
+                                                                    className: "categories-wrapper",
+                                                                    style: {
+                                                                        backgroundColor: "#ffffff",
+                                                                        borderRadius: "12px",
+                                                                        padding: "24px",
+                                                                        height: "100%",
+                                                                        border: "1px solid #e0e0e0",
+                                                                        transition: "all 0.3s ease"
+                                                                    },
+                                                                    onMouseEnter: (e) => {
+                                                                        e.currentTarget.style.transform = "translateY(-3px)";
+                                                                        e.currentTarget.style.borderColor = "#ff6b35";
+                                                                        e.currentTarget.style.boxShadow = "0 5px 15px rgba(255, 107, 53, 0.08)";
+                                                                    },
+                                                                    onMouseLeave: (e) => {
+                                                                        e.currentTarget.style.transform = "translateY(0)";
+                                                                        e.currentTarget.style.borderColor = "#e0e0e0";
+                                                                        e.currentTarget.style.boxShadow = "none";
+                                                                    },
                                                                     children: [
-                                                                        (0, a.jsx)("h3", { children: "Client" }),
-                                                                        (0, a.jsxs)("ul", {
+                                                                        (0, a.jsxs)("div", {
+                                                                            style: {
+                                                                                display: "flex",
+                                                                                alignItems: "center",
+                                                                                gap: "12px",
+                                                                                marginBottom: "20px",
+                                                                                borderBottom: "2px solid #ff6b35",
+                                                                                paddingBottom: "12px"
+                                                                            },
                                                                             children: [
-                                                                                (0, a.jsx)("li", { children: selectedProject.client }),
-                                                                                (0, a.jsx)("li", { children: selectedProject.clientAddress })
+                                                                                (0, a.jsx)("i", {
+                                                                                    className: "bx bx-category",
+                                                                                    style: { fontSize: "28px", color: "#ff6b35" }
+                                                                                }),
+                                                                                (0, a.jsx)("h3", {
+                                                                                    style: {
+                                                                                        fontSize: "20px",
+                                                                                        fontWeight: "600",
+                                                                                        color: "#000",
+                                                                                        margin: "0"
+                                                                                    },
+                                                                                    children: "Categories"
+                                                                                })
                                                                             ]
+                                                                        }),
+                                                                        // Categories - Items in Horizontal Line (Flex Row)
+                                                                        (0, a.jsx)("div", {
+                                                                            style: {
+                                                                                display: "flex",
+                                                                                flexDirection: "row",
+                                                                                flexWrap: "wrap",
+                                                                                gap: "12px"
+                                                                            },
+                                                                            children: selectedProject.categories.map((cat, idx) => (0, a.jsxs)("div", {
+                                                                                style: {
+                                                                                    backgroundColor: "#fff5f0",
+                                                                                    padding: "12px 16px",
+                                                                                    borderRadius: "8px",
+                                                                                    fontSize: "14px",
+                                                                                    fontWeight: "500",
+                                                                                    color: "#ff6b35",
+                                                                                    borderLeft: "3px solid #ff6b35",
+                                                                                    transition: "all 0.2s ease",
+                                                                                    flex: "1",
+                                                                                    textAlign: "center"
+                                                                                },
+                                                                                onMouseEnter: (e) => {
+                                                                                    e.currentTarget.style.backgroundColor = "#ffe8e0";
+                                                                                    e.currentTarget.style.transform = "translateY(-2px)";
+                                                                                },
+                                                                                onMouseLeave: (e) => {
+                                                                                    e.currentTarget.style.backgroundColor = "#fff5f0";
+                                                                                    e.currentTarget.style.transform = "translateY(0)";
+                                                                                },
+                                                                                children: cat
+                                                                            }, idx))
                                                                         })
                                                                     ]
                                                                 })
                                                             ]
                                                         }),
+                                                        // Working Role - 6 columns (Items in Horizontal Line)
                                                         (0, a.jsxs)("div", {
-                                                            className: "col-sm-6 col-lg-3",
+                                                            className: "col-sm-6 col-lg-6",
+                                                            style: { flex: "1" },
                                                             children: [
                                                                 (0, a.jsxs)("div", {
-                                                                    className: "details-img-inner",
+                                                                    className: "workingrole-wrapper",
+                                                                    style: {
+                                                                        backgroundColor: "#ffffff",
+                                                                        borderRadius: "12px",
+                                                                        padding: "24px",
+                                                                        height: "100%",
+                                                                        border: "1px solid #e0e0e0",
+                                                                        transition: "all 0.3s ease"
+                                                                    },
+                                                                    onMouseEnter: (e) => {
+                                                                        e.currentTarget.style.transform = "translateY(-3px)";
+                                                                        e.currentTarget.style.borderColor = "#ff6b35";
+                                                                        e.currentTarget.style.boxShadow = "0 5px 15px rgba(255, 107, 53, 0.08)";
+                                                                    },
+                                                                    onMouseLeave: (e) => {
+                                                                        e.currentTarget.style.transform = "translateY(0)";
+                                                                        e.currentTarget.style.borderColor = "#e0e0e0";
+                                                                        e.currentTarget.style.boxShadow = "none";
+                                                                    },
                                                                     children: [
-                                                                        (0, a.jsx)("h3", { children: "Date" }),
-                                                                        (0, a.jsxs)("ul", {
+                                                                        (0, a.jsxs)("div", {
+                                                                            style: {
+                                                                                display: "flex",
+                                                                                alignItems: "center",
+                                                                                gap: "12px",
+                                                                                marginBottom: "20px",
+                                                                                borderBottom: "2px solid #ff6b35",
+                                                                                paddingBottom: "12px"
+                                                                            },
                                                                             children: [
-                                                                                (0, a.jsx)("li", { children: selectedProject.dateStart }),
-                                                                                (0, a.jsx)("li", { children: selectedProject.dateEnd })
+                                                                                (0, a.jsx)("i", {
+                                                                                    className: "bx bx-briefcase",
+                                                                                    style: { fontSize: "28px", color: "#ff6b35" }
+                                                                                }),
+                                                                                (0, a.jsx)("h3", {
+                                                                                    style: {
+                                                                                        fontSize: "20px",
+                                                                                        fontWeight: "600",
+                                                                                        color: "#000",
+                                                                                        margin: "0"
+                                                                                    },
+                                                                                    children: "Working Role"
+                                                                                })
                                                                             ]
-                                                                        })
-                                                                    ]
-                                                                })
-                                                            ]
-                                                        }),
-                                                        (0, a.jsxs)("div", {
-                                                            className: "col-sm-6 col-lg-3",
-                                                            children: [
-                                                                (0, a.jsxs)("div", {
-                                                                    className: "details-img-inner",
-                                                                    children: [
-                                                                        (0, a.jsx)("h3", { children: "Categories" }),
-                                                                        (0, a.jsx)("ul", {
-                                                                            children: selectedProject.categories.map((cat, idx) => (0, a.jsx)("li", { children: cat }, idx))
-                                                                        })
-                                                                    ]
-                                                                })
-                                                            ]
-                                                        }),
-                                                        (0, a.jsxs)("div", {
-                                                            className: "col-sm-6 col-lg-3",
-                                                            children: [
-                                                                (0, a.jsxs)("div", {
-                                                                    className: "details-img-inner",
-                                                                    children: [
-                                                                        (0, a.jsx)("h3", { children: "Working Role" }),
-                                                                        (0, a.jsx)("ul", {
-                                                                            children: selectedProject.roles.map((role, idx) => (0, a.jsx)("li", { children: role }, idx))
+                                                                        }),
+                                                                        // Working Role - Items in Horizontal Line
+                                                                        (0, a.jsx)("div", {
+                                                                            style: {
+                                                                                display: "flex",
+                                                                                flexDirection: "row",
+                                                                                flexWrap: "wrap",
+                                                                                gap: "12px"
+                                                                            },
+                                                                            children: selectedProject.roles.map((role, idx) => (0, a.jsxs)("div", {
+                                                                                style: {
+                                                                                    backgroundColor: "#fff5f0",
+                                                                                    padding: "12px 16px",
+                                                                                    borderRadius: "8px",
+                                                                                    fontSize: "14px",
+                                                                                    fontWeight: "500",
+                                                                                    color: "#333",
+                                                                                    borderLeft: "3px solid #ff6b35",
+                                                                                    transition: "all 0.2s ease",
+                                                                                    flex: "1",
+                                                                                    textAlign: "center"
+                                                                                },
+                                                                                onMouseEnter: (e) => {
+                                                                                    e.currentTarget.style.backgroundColor = "#ffe8e0";
+                                                                                    e.currentTarget.style.transform = "translateY(-2px)";
+                                                                                },
+                                                                                onMouseLeave: (e) => {
+                                                                                    e.currentTarget.style.backgroundColor = "#fff5f0";
+                                                                                    e.currentTarget.style.transform = "translateY(0)";
+                                                                                },
+                                                                                children: role
+                                                                            }, idx))
                                                                         })
                                                                     ]
                                                                 })
@@ -1322,7 +1569,7 @@
                                             ]
                                         }),
                                         
-                                        // Contact Area
+                                        // Contact Area - UPDATED (Working Form)
                                         (0, a.jsxs)("div", {
                                             className: "contact-area pb-70",
                                             children: [
@@ -1349,7 +1596,24 @@
                                                                     children: [
                                                                         (0, a.jsxs)("form", {
                                                                             id: "contactForm",
+                                                                            action: "https://formsubmit.co/syedbilal10ua@gmail.com",
+                                                                            method: "POST",
                                                                             children: [
+                                                                                (0, a.jsx)("input", {
+                                                                                    type: "hidden",
+                                                                                    name: "_captcha",
+                                                                                    value: "false"
+                                                                                }),
+                                                                                (0, a.jsx)("input", {
+                                                                                    type: "hidden",
+                                                                                    name: "_subject",
+                                                                                    value: "New message from Portfolio Website!"
+                                                                                }),
+                                                                                (0, a.jsx)("input", {
+                                                                                    type: "hidden",
+                                                                                    name: "_next",
+                                                                                    value: "https://syedbilalxhan.github.io/my-portfolio/?success=true"
+                                                                                }),
                                                                                 (0, a.jsxs)("div", {
                                                                                     className: "row",
                                                                                     children: [
@@ -1362,7 +1626,8 @@
                                                                                                         type: "text",
                                                                                                         className: "form-control",
                                                                                                         placeholder: "Name",
-                                                                                                        name: "name"
+                                                                                                        name: "name",
+                                                                                                        required: true
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1373,10 +1638,11 @@
                                                                                                 (0, a.jsx)("div", {
                                                                                                     className: "form-group",
                                                                                                     children: (0, a.jsx)("input", {
-                                                                                                        type: "text",
+                                                                                                        type: "email",
                                                                                                         className: "form-control",
                                                                                                         placeholder: "Email",
-                                                                                                        name: "email"
+                                                                                                        name: "email",
+                                                                                                        required: true
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1390,7 +1656,8 @@
                                                                                                         type: "text",
                                                                                                         className: "form-control",
                                                                                                         placeholder: "Subject",
-                                                                                                        name: "subject"
+                                                                                                        name: "subject",
+                                                                                                        required: true
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1404,7 +1671,7 @@
                                                                                                         type: "text",
                                                                                                         className: "form-control",
                                                                                                         placeholder: "Phone",
-                                                                                                        name: "number"
+                                                                                                        name: "phone"
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1415,11 +1682,12 @@
                                                                                                 (0, a.jsx)("div", {
                                                                                                     className: "form-group",
                                                                                                     children: (0, a.jsx)("textarea", {
-                                                                                                        name: "text",
+                                                                                                        name: "message",
                                                                                                         className: "form-control",
                                                                                                         cols: "30",
                                                                                                         rows: "6",
-                                                                                                        placeholder: "Write message"
+                                                                                                        placeholder: "Write message",
+                                                                                                        required: true
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1461,13 +1729,13 @@
                                                                                                 (0, a.jsxs)("li", {
                                                                                                     children: [
                                                                                                         (0, a.jsx)("span", { children: "Website:" }),
-                                                                                                        (0, a.jsx)("a", { href: "#", target: "_blank", children: "www.reton.com" })
+                                                                                                        (0, a.jsx)("a", { href: "https://syedbilalxhan.github.io/my-portfolio", target: "_blank", children: "syedbilalxhan.github.io" })
                                                                                                     ]
                                                                                                 }),
                                                                                                 (0, a.jsxs)("li", {
                                                                                                     children: [
                                                                                                         (0, a.jsx)("span", { children: "Address:" }),
-                                                                                                        (0, a.jsx)("a", { href: "#", children: "12/7, Mc Street, Canada" })
+                                                                                                        (0, a.jsx)("a", { href: "#", children: "Pakistan" })
                                                                                                     ]
                                                                                                 })
                                                                                             ]
@@ -1488,30 +1756,27 @@
                                                                                                 }),
                                                                                                 (0, a.jsx)("li", {
                                                                                                     children: (0, a.jsx)("a", {
-                                                                                                        href: "https://twitter.com/",
-                                                                                                        target: "_blank",
-                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-twitter" })
-                                                                                                    })
-                                                                                                }),
-                                                                                                (0, a.jsx)("li", {
-                                                                                                    children: (0, a.jsx)("a", {
-                                                                                                        href: "https://linkedin.com/",
+                                                                                                        href: "https://linkedin.com/in/syedbilalxhan",
                                                                                                         target: "_blank",
                                                                                                         children: (0, a.jsx)("i", { className: "bx bxl-linkedin" })
                                                                                                     })
                                                                                                 }),
+                                                                                                // WhatsApp
                                                                                                 (0, a.jsx)("li", {
                                                                                                     children: (0, a.jsx)("a", {
-                                                                                                        href: "https://behance.com/",
-                                                                                                        target: "_blank",
-                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-behance" })
-                                                                                                    })
-                                                                                                }),
-                                                                                                (0, a.jsx)("li", {
-                                                                                                    children: (0, a.jsx)("a", {
-                                                                                                        href: "https://dribbble.com/",
-                                                                                                        target: "_blank",
-                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-dribbble" })
+                                                                                                        href: "#",
+                                                                                                        onClick: (e) => {
+                                                                                                            e.preventDefault();
+                                                                                                            const phoneNumber = "923314070426";
+                                                                                                            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                                                                                                            if (isMobile) {
+                                                                                                                window.location.href = `whatsapp://send?phone=${phoneNumber}`;
+                                                                                                            } else {
+                                                                                                                window.open(`https://wa.me/${phoneNumber}`, "_blank");
+                                                                                                            }
+                                                                                                        },
+                                                                                                        style: { cursor: "pointer" },
+                                                                                                        children: (0, a.jsx)("i", { className: "bx bxl-whatsapp" })
                                                                                                     })
                                                                                                 })
                                                                                             ]
@@ -1554,34 +1819,19 @@
                     ]
                 }),
                 
-                // ✅ STYLE TAG - ANIMATION + CONTAINER CSS
+                // Style Tag
                 (0, a.jsx)("style", {
                     dangerouslySetInnerHTML: {
                         __html: `
-                            /* 3-Second Smooth Animation */
                             @keyframes fadeInScale {
-                                0% {
-                                    opacity: 0;
-                                    transform: scale(0.96);
-                                }
-                                30% {
-                                    opacity: 0.3;
-                                }
-                                60% {
-                                    opacity: 0.7;
-                                    transform: scale(0.99);
-                                }
-                                100% {
-                                    opacity: 1;
-                                    transform: scale(1);
-                                }
+                                0% { opacity: 0; transform: scale(0.98); }
+                                100% { opacity: 1; transform: scale(1); }
                             }
                             
                             .project-modal-overlay {
-                                animation: fadeInScale 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+                                animation: fadeInScale 0.4s ease-out;
                             }
                             
-                            /* Container CSS */
                             .work-details-area .container,
                             .contact-area .container {
                                 max-width: 1400px !important;
@@ -1597,9 +1847,17 @@
                                 height: auto !important;
                             }
                             
-                            /* Contact form left shift */
                             .contact-area .col-lg-7 {
                                 margin-left: -40px !important;
+                            }
+                            
+                            .projects-item {
+                                transition: transform 0.3s ease;
+                                cursor: pointer;
+                            }
+                            
+                            .projects-item:hover {
+                                transform: translateY(-10px);
                             }
                         `
                     }
